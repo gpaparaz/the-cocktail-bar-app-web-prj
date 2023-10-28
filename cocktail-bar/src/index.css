@@ -5,6 +5,8 @@
   --dark-text-color: #161616;
   --dark-bg: #161616;
   --soft-dark: #272724;
+  --bs-primary: #0E4A00;
+  --bs-hover-color: #166006;
   /*Scala di Grigi*/
   --extra-light-gray: #f8f9faff;
   --soft-light-gray: #f2f2f3;
@@ -23,6 +25,25 @@
   --btn-radius: 16px;
   --light-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   --dark-shadow: 4px 5px 15px rgba(5, 6, 6, 0.4);
+
+
+}
+
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--bs-primary);
+  --bs-btn-border-color: var(--bs-primary);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--bs-hover-color);
+  --bs-btn-hover-border-color: var(--bs-hover-color);
+  --bs-btn-focus-shadow-rgb: 49,132,253;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--bs-primary);
+  --bs-btn-active-border-color: var(--bs-hover-color);
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: var(--dark-gray);
+  --bs-btn-disabled-border-color: var(--dark-gray);
 }
 
 *,
@@ -362,3 +383,112 @@ SIDEBAR MEDIA QUERY STYLE
 END SIDEBAR STYLE
 ====================
 */
+
+
+/*
+====================
+HERO STYLE
+====================
+*/
+
+.hero-img-container {
+  position: relative;
+  background-position: top;
+  background-size: contain;
+  min-height: 96vh;
+  width: 100%;
+  z-index: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+}
+
+.hero-container {
+  height: 100%;
+}
+
+/*=== HOME HERO ===*/
+
+.home-hero {
+  display: -moz-grid;
+  display: -ms-grid;
+  display: -webkit-grid;
+  display: grid;
+  height: 100%;
+  align-items: center;
+}
+
+.home-hero-text {
+  width: 100%;
+  display: -moz-grid;
+  display: -ms-grid;
+  display: -webkit-grid;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  gap: 2rem;
+  color: var(--text-color);
+}
+
+.home-hero-title {
+  display: -moz-grid;
+  display: -ms-grid;
+  display: -webkit-grid;
+  display: grid;
+  gap: 1rem;
+}
+
+.home-hero-title h2 {
+  font-weight: 900;
+}
+
+.home-hero-title h4 {
+  font-variant: small-caps;
+}
+
+.home-hero-text p {
+  align-self: center;
+  color: var(--light-gray);
+  max-width: 70ch;
+  line-height: 1.6;
+}
+
+.home-hero-text .btn {
+  align-self: center;
+  border-radius: 22px;
+}
+
+/*=== HOME HERO MEDIA ===*/
+@media screen and (min-width: 992px) {
+  .home-hero {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .home-hero-text {
+    grid-column: 1/7;
+    gap: 3rem;
+    text-align: left;
+    place-items: start;
+  }
+
+  .home-hero-text p {
+    align-self: flex-start;
+    color: var(--light-gray);
+    max-width: 70ch;
+    line-height: 1.6;
+  }
+
+  .home-hero-text .btn {
+    align-self: unset;
+  }
+
+}
