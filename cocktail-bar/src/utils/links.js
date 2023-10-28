@@ -1,6 +1,5 @@
 import React from "react";
-import { AiFillHome, AiFillMessage } from "react-icons/ai";
-import { RiTeamFill } from "react-icons/ri";
+import { AiFillHome } from "react-icons/ai";
 import {
   FaFacebookSquare,
   FaInstagramSquare

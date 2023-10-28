@@ -1,13 +1,364 @@
-body {
+
+:root {
+  /* Colors */
+  --text-color: #EDEDDC;
+  --dark-text-color: #161616;
+  --dark-bg: #161616;
+  --soft-dark: #272724;
+  /*Scala di Grigi*/
+  --extra-light-gray: #f8f9faff;
+  --soft-light-gray: #f2f2f3;
+  --light-gray: #ced4daff;
+  --primary-gray: #adb5bdff;
+  --soft-dark-gray: #89949e;
+  --dark-gray: #6c757dff;
+  --extra-dark-gray: #343a40ff;
+  /* Global */
+  --letter-spacing: 0.08rem;
+  --transition: all 0.2s ease;
+  --btn-transition: all 0.125s ease;
+  --radius: 0.25rem;
+  --img-radius: 0.25rem 0.25rem 0rem 0rem;
+  --card-radius: 0rem 0rem 0.25rem 0.25rem;
+  --btn-radius: 16px;
+  --light-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 4px 5px 15px rgba(5, 6, 6, 0.4);
+}
+
+*,
+*::after,
+*::before {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--dark-bg);
+  color: var(--text-color);
+  font-family: "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+/* GLOBAL STYLE */
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+hr {
+  border: none;
+  border-bottom: 1px solid var(--divider-color);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--letter-spacing);
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  color: var(--primary-gray);
+  font-size: 0.9rem;
+  letter-spacing: var(--letter-spacing);
+}
+@media screen and (min-width: 753px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  h4 {
+    font-size: 1.25rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+
+/*
+====================
+NAV STYLE
+====================
+*/
+
+.nav {
+  background-color: transparent;
+  height: 4rem;
+  box-shadow: var(--light-shadow);
+  display: flex;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  align-items: center;
+}
+
+.nav-header {
+  display: flex;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  -moz-justify-content: space-between;
+  -webkit-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-brand {
+  margin-bottom: 0.1rem;
+  color: var(--trypan-blue-2);
+  text-transform: lowercase;
+  font-variant: small-caps;
+}
+
+.nav-toggler {
+  font-size: 1.5rem;
+  padding-bottom: 0;
+  align-self: center;
+  transition: var(--btn-transition);
+}
+
+.nav-toggler:hover .nav-icon {
+  transform: rotateZ(90deg);
+}
+
+.nav-links {
+  display: none;
+}
+
+.nav-link {
+  display: grid;
+  display: -moz-grid;
+  display: -ms-grid;
+  display: -webkit-grid;
+  align-items: center;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  white-space: nowrap;
+}
+
+.nav-text {
+  font-size: 1.3rem;
+  text-transform: lowercase;
+  font-variant: small-caps;
+}
+
+.socialTop {
+  display: none;
+}
+
+.nav-item {
+  transition: var(--btn-transition);
+}
+
+.nav-item:hover {
+  color: var(--flickr-pink);
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/*
+====================
+NAV STYLE MEDIA QUERY
+====================
+*/
+
+@media screen and (min-width: 992px) {
+  .nav {
+    -moz-justify-content: space-around;
+    -webkit-justify-content: space-around;
+    -ms-justify-content: space-around;
+    justify-content: space-around;
+    height: 5rem;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  .nav-container {
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    align-items: center;
+    -moz-justify-content: space-between;
+    -webkit-justify-content: space-between;
+    -ms-justify-content: space-between;
+    justify-content: space-between;
+  }
+
+  .nav-header {
+    text-align: left;
+    width: fit-content;
+  }
+
+  .links-container {
+    justify-self: center;
+  }
+  .nav-toggler {
+    display: none;
+  }
+
+  .nav-links {
+    width: 50%;
+    display: flex;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    -moz-justify-content: space-between;
+    -webkit-justify-content: space-between;
+    -ms-justify-content: space-between;
+    justify-content: space-between;
+  }
+
+  .nav-icon {
+    font-size: 1.4em;
+  }
+
+  .socialTop {
+    display: grid;
+    display: -moz-grid;
+    display: -ms-grid;
+    display: -webkit-grid;
+    align-items: center;
+    grid-template-columns: auto auto auto;
+    gap: 1rem;
+    font-size: 1.2rem;
+  }
+}
+
+/*
+====================
+END NAV STYLE
+====================
+*/
+
+/*
+====================
+SIDEBAR STYLE
+====================
+*/
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  width: 100%;
+  background: pink;
+  transform: translateX(-100%);
+  transition: var(--transition);
+}
+
+.sidebar-content {
+  height: 50%;
+  display: grid;
+  display: -moz-grid;
+  display: -ms-grid;
+  display: -webkit-grid;
+  gap: 2rem;
+}
+
+.sidebar .nav-header {
+  margin: 0;
+  height: 4rem;
+}
+
+.sidebar .nav-header .nav-icon {
+  margin: 0;
+  padding: 0;
+  font-size: 1.8rem;
+}
+
+.sidebar-links {
+  display: grid;
+  display: -moz-grid;
+  display: -ms-grid;
+  display: -webkit-grid;
+  display: grid;
+  place-items: flex-start;
+  gap: 1rem;
+  font-size: 1.2em;
+}
+
+.sidebar-links .nav-item {
+  width: 100%;
+  padding: 0.5rem 0rem;
+}
+
+.sidebar-social {
+  width: fit-content;
+  margin: 2rem auto;
+  font-size: 1.5rem;
+  display: -moz-grid;
+  display: -ms-grid;
+  display: -webkit-grid;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+}
+
+.nav-item:hover .nav-link .nav-icon {
+  transform: scale(1.1);
+  color: var(--flickr-pink) !important;
+}
+
+.show-sidebar {
+  transform: translateX(0%) !important;
+}
+
+/*
+====================
+SIDEBAR MEDIA QUERY STYLE
+====================
+*/
+
+@media screen and (min-width: 992px) {
+  .sidebar {
+    display: none;
+  }
+}
+
+/*
+====================
+END SIDEBAR STYLE
+====================
+*/
