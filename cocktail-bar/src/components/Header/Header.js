@@ -3,6 +3,7 @@ import { useGlobalContext } from "../../context";
 import { LinkComponent, SocialComponent } from '../../utils/links';
 import { FaBars } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import style from './header.css'
 
 const Header = () => {
 

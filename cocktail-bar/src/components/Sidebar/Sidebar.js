@@ -2,6 +2,9 @@ import React from "react";
 import { LinkComponent, SocialComponent } from "../../utils/links";
 import { VscArrowSmallLeft } from "react-icons/vsc";
 import { useGlobalContext } from "../../context";
+import style from './sidebar.css';
+
+
 const Sidebar = () => {
   const { closeSidebar, isSidebarOpen } = useGlobalContext();
   return (
