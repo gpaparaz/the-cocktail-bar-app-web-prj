@@ -1,9 +1,19 @@
 import React from 'react'
 import { useGlobalContext } from '../context';
-import Hero from '../components/Hero';
+import Hero from '../components/Hero/Hero';
 import { Link } from 'react-router-dom';
+import useMultipleFetch from '../useMultipleFetch';
+import Loading from '../components/Loading/Loading'
+import ErrorMessage from '../components/ErrorMessage/ErrorMessage'
+import Cocktails from '../components/Cocktails/Cocktails'
 
 const Home = () => {
+  const numberOfRequests = 6;
+
+  const { isLoading, data, isError } = useMultipleFetch(numberOfRequests);
+  console.log(data)
+
+
   return (
     <section>
     <Hero>
@@ -23,6 +33,13 @@ const Home = () => {
           
         </div>
       </Hero>
+      {isLoading ? (
+        <Loading />
+      ) : isError ? (
+        <ErrorMessage>Nessun Cocktail Trovato</ErrorMessage>
+      ) : data && data.length > 0 ? (
+        <Cocktails data={data} />
+      ) : null}
     </section>
   )
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import defaultImage from "../assets/image/home-hero.jpg";
+import defaultImage from "../../assets/image/home-hero.jpg";
 
 const Hero = ({ children, img }) => {
     const image = img ? img : defaultImage;

@@ -1,6 +1,6 @@
 import React from 'react'
-import { useGlobalContext } from "../context";
-import { LinkComponent, SocialComponent } from '../utils/links';
+import { useGlobalContext } from "../../context";
+import { LinkComponent, SocialComponent } from '../../utils/links';
 import { FaBars } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
