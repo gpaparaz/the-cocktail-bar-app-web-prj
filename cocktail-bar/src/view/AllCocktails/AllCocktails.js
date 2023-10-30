@@ -1,16 +1,24 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useGlobalContext } from "../../context";
 import style from './allcocktails.css';
 import clsx from 'clsx';
+import Cocktails from "../../components/Cocktails/Cocktails";
+import Loading from "../../components/Loading/Loading";
+import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 
 const AllCocktails = () => {
   const { data, isLoading, isError, searchCocktail, query, count } =
     useGlobalContext();
-  const [input, setInput] = useState(query);
+  const [input, setInput] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
     searchCocktail(input);
   };
+
+  useEffect(() => {
+    searchCocktail("f=a");
+  }, [query, data]);
+
   const [displayGrid, setDisplayGrid] = useState("true");
 
   return (
@@ -46,9 +54,16 @@ const AllCocktails = () => {
           <div className="row justify-content-center">
             <div className="col">
               {displayGrid ? (
-                <p> lista di pokemon</p>
+                // <Cocktails data={data} />
+                isLoading ? (
+                    <Loading />
+                  ) : isError ? (
+                    <ErrorMessage>Nessun Cocktail Trovato</ErrorMessage>
+                  ) : data && data.drinks && data.drinks.length > 0 ?(
+                    <Cocktails data={data.drinks} />
+                  ) : null
               ) : (
-                <p> altra lista di pokemon</p>
+                <p> altra lista di cocktail in lista</p>
               )}
             </div>
           </div>

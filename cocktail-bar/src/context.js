@@ -5,7 +5,7 @@ const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
     const [query, setQuery] = useState("");
-    const { isLoading, data, isError, count } = useFetch(`s=${query}`);
+    const { isLoading, data, isError, count } = useFetch("f=a");
 
   //stati e funzioni che gestiscono la sidebar
   const [isSidebarOpen, setSidebarOpen] = useState(false);
@@ -32,6 +32,7 @@ const AppProvider = ({ children }) => {
         count,
         query,
         data,
+        searchCocktail
       }}
     >
       {children}
