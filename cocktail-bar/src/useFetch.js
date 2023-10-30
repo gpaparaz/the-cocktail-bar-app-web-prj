@@ -2,13 +2,12 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 const searchUrl = "https://www.thecocktaildb.com/api/json/v1/1/search.php?";
 const singleUrl = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?";
-const randomSearch = 'https://www.thecocktaildb.com/api/json/v1/1/random.php';
-
-const useFetch = (url, query, type = false) => {
+const useFetch = (query, type = false) => {
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState([]);
   const [count, setCount] = useState(0);
   const [isError, setIsError] = useState(false);
+  const url = type ? singleUrl : searchUrl;
   useEffect(() => {
     (async (query) => {
       setIsError(false);
