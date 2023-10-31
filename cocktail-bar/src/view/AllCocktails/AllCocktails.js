@@ -5,25 +5,50 @@ import clsx from 'clsx';
 import Cocktails from "../../components/Cocktails/Cocktails";
 import Loading from "../../components/Loading/Loading";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
+import Form from 'react-bootstrap/Form';
 
 const AllCocktails = () => {
-  const { data, isLoading, isError, searchCocktail, query, count } =
-    useGlobalContext();
-  const [input, setInput] = useState("");
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    searchCocktail(input);
-  };
-
-  useEffect(() => {
-    searchCocktail("f=a");
-  }, [query, data]);
-
-  const [displayGrid, setDisplayGrid] = useState("true");
-
+    const {
+        data,
+        isLoading,
+        isError,
+        searchCocktail,
+        query,
+        count,
+      } = useGlobalContext();
+    
+      const [displayGrid, setDisplayGrid] = useState("true");
+      const [selectedLetter, setSelectedLetter] = useState('');
+      const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+    
+      const handleSelectChange = (e) => {
+        setSelectedLetter(e.target.value);
+        searchCocktail('f=' + e.target.value);
+      };
+    
+      useEffect(() => {
+        if (selectedLetter) {
+          searchCocktail(`f=${selectedLetter}`);
+        } else {
+          searchCocktail("f=a");
+        }
+      }, [selectedLetter, searchCocktail]);
+    
   return (
     <div className="d-flex">
-      <div className="col-3 p-3 mb-2 filters">lista di filtri</div>
+      <div className="col-3 p-3 mb-2 filters">lista di filtri
+      <Form>
+          <Form.Select aria-label="Select letter" onChange={handleSelectChange}>
+            <option value="">All</option>
+            {alphabet.map((letter, index) => (
+              <option key={index} value={letter}>
+                {letter}
+              </option>
+            ))}
+          </Form.Select>
+        </Form>
+ 
+      </div>
 
       <div className="col-sm-9 p-3 content-products">
         <div className="container">

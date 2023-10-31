@@ -5,7 +5,7 @@ const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
     const [query, setQuery] = useState("");
-    const { isLoading, data, isError, count } = useFetch("f=a");
+    const { isLoading, data, isError, count } = useFetch(`${query}`);
 
   //stati e funzioni che gestiscono la sidebar
   const [isSidebarOpen, setSidebarOpen] = useState(false);
