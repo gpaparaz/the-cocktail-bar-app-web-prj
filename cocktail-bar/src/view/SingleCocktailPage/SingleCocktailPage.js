@@ -1,21 +1,22 @@
-import React, { useRef, useState } from 'react'
+import React from 'react'
 import style from './singleCocktailPage.css'
 import Loading from "../../components/Loading/Loading";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import { BsArrowLeftShort } from "react-icons/bs";
 import {IoArrowBackCircleSharp} from "react-icons/io5";
 import { useParams, Link } from "react-router-dom";
-import useFetch from '../../useFetch';
-import Carousel from 'react-bootstrap/Carousel';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import Cocktails from '../../components/Cocktails/Cocktails';
+import useFetchByIdAndIngredient from '../../useFetchByIdAndIngredient';
 
 const SingleCocktailPage = () => {
 
   const { id } = useParams();
-  const { data, isLoading, isError } = useFetch(`i=${id}`, true);
+  const { data, isLoading, isError, ingredientsList } = useFetchByIdAndIngredient(id)
+
   if (isLoading) {
     return (
         <Loading />
@@ -53,7 +54,7 @@ const SingleCocktailPage = () => {
     strMeasure3,
     strMeasure4,
     strMeasure5,
-  } = data.drinks[0];
+  } = data;
 
   const strInstructionsList = [
     { istruzione: strIngredient1, qty: strMeasure1 },
@@ -62,6 +63,7 @@ const SingleCocktailPage = () => {
     { istruzione: strIngredient4, qty: strMeasure4 },
     { istruzione: strIngredient5, qty: strMeasure5 },
   ];
+
 
   const style = {
     backgroundImage: ` linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${image})`,
@@ -120,6 +122,18 @@ const SingleCocktailPage = () => {
       </SwiperSlide>
   </Swiper>
   </div>
+  <section>
+    <h3>Altri drink simili</h3>
+  <div className="container-sm px-5">
+        {isLoading ? (
+          <Loading />
+        ) : isError ? (
+          <ErrorMessage>Nessun Cocktail Trovato</ErrorMessage>
+        ) : ingredientsList && ingredientsList.length > 0 ? (
+          <Cocktails data={ingredientsList} />
+        ) : null}
+      </div>
+  </section>
   </>
    
   );
