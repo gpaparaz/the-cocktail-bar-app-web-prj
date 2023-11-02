@@ -13,7 +13,7 @@ const Cocktail = ({ strDrinkThumb: img, idDrink: _id, strDrink: name }) => {
 
   return (
     <div className="single-cocktail">
-      <div
+      <div onClick={() => goToCocktail(_id)}
         className='img'
         style={{
           backgroundImage: `url(${img})`,
@@ -26,8 +26,7 @@ const Cocktail = ({ strDrinkThumb: img, idDrink: _id, strDrink: name }) => {
       >
         <h5>{name}</h5>
         <div
-          className='see-more-btn brand-color'
-          onClick={() => goToCocktail(_id)}
+          className='see-more-btn brand-color'          
         >
           <h5>Ricetta</h5>
           <HiClipboardList className='icon ' />
