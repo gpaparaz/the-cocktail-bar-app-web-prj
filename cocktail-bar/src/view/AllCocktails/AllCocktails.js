@@ -6,47 +6,38 @@ import Cocktails from "../../components/Cocktails/Cocktails";
 import Loading from "../../components/Loading/Loading";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import Form from 'react-bootstrap/Form';
+import useSearchAllDrinks from "../../useSearchAllDrinks";
 
 const AllCocktails = () => {
     const {
         data,
         isLoading,
         isError,
-        searchCocktail,
-        query,
-        count,
-      } = useGlobalContext();
+        // searchCocktail,
+      } = useSearchAllDrinks();
+      // console.log(data)
     
       const [displayGrid, setDisplayGrid] = useState("true");
-      const [selectedLetter, setSelectedLetter] = useState('');
-      const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+      // const [selectedLetter, setSelectedLetter] = useState('A');
+      // const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
     
-      const handleSelectChange = (e) => {
-        setSelectedLetter(e.target.value);
-        searchCocktail('f=' + e.target.value);
-      };
+      // const handleSelectChange = (e) => {
+      //   setSelectedLetter(e.target.value);
+      //   searchCocktail('f=' + e.target.value);
+      // };
     
-      useEffect(() => {
-        if (selectedLetter) {
-          searchCocktail(`f=${selectedLetter}`);
-        } else {
-          searchCocktail("f=a");
-        }
-      }, [selectedLetter, searchCocktail]);
+      // useEffect(() => {
+      //   if (selectedLetter) {
+      //     searchCocktail(`f=${selectedLetter}`);
+      //   } else {
+      //     searchCocktail("f=a");
+      //   }
+      // }, [selectedLetter, searchCocktail]);
     
   return (
     <div className="d-flex">
       <div className="col-3 p-3 mb-2 filters">lista di filtri
-      <Form>
-          <Form.Select aria-label="Select letter" onChange={handleSelectChange}>
-            <option value="">All</option>
-            {alphabet.map((letter, index) => (
-              <option key={index} value={letter}>
-                {letter}
-              </option>
-            ))}
-          </Form.Select>
-        </Form>
+      
  
       </div>
 
@@ -84,8 +75,8 @@ const AllCocktails = () => {
                     <Loading />
                   ) : isError ? (
                     <ErrorMessage>Nessun Cocktail Trovato</ErrorMessage>
-                  ) : data && data.drinks && data.drinks.length > 0 ?(
-                    <Cocktails data={data.drinks} />
+                  ) : data && data && data.length > 0 ?(
+                    <Cocktails data={data} />
                   ) : null
               ) : (
                 <p> altra lista di cocktail in lista</p>
