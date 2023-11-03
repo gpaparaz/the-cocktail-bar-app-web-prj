@@ -8,6 +8,7 @@ import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import Form from 'react-bootstrap/Form';
 import useSearchAllDrinks from "../../useSearchAllDrinks";
 import useFetch from "../../useFetch";
+import useGetListOfFilters from "../../useGetListOfFilters";
 
 const AllCocktails = () => {
     const {
@@ -20,18 +21,10 @@ const AllCocktails = () => {
     
       const [displayGrid, setDisplayGrid] = useState("true");
 
-      const glass =['Cocktail glass', 
-      'Champagne flute', 
-      'Martini glass', 
-      'Old-fashioned glass', 
-      'Highball Glass', 
-      'Coffee mug', 
-      'Collins glass', 
-      'Shot glass',
-      'Irish coffee cup'];
+      const { data:glass, isLoading: isLoadingGlass } = useGetListOfFilters('g=list');
+      const { data:category, isLoading: isLoadingCategory } = useGetListOfFilters('c=list');
+      
       const [selectedGlass, setSelectedGlass] = useState('');
-
-      const category = ['Ordinary Drink', 'Cocktail', 'Cocoa', 'Shot'];
       const [selectedCategory, setSelectedCategory] = useState('');
     
       const handleSelectedGlass = (e) => {
@@ -43,7 +36,7 @@ const AllCocktails = () => {
         setSelectedCategory(e.target.value);
         searchCocktail('c=' + e.target.value, true);
       };
-    
+
       useEffect(() => {
         if (selectedGlass) {
           searchCocktail(`g=${selectedGlass}`, true);
@@ -55,17 +48,23 @@ const AllCocktails = () => {
           searchCocktail("", false);
         }
       }, [selectedGlass, searchCocktail]);
+
+
     
   return (
     <div className="d-flex">
       <div className="col-3 p-3 mb-2 filters">
-      <label>Tipo di bicchiere</label>
-      <Form>
+      {
+        (isLoadingGlass || isLoadingCategory) ? (
+          <Loading />):(
+        <>
+        <label>Tipo di bicchiere</label>
+        <Form>
           <Form.Select aria-label="Select glass" onChange={handleSelectedGlass}>
             <option value="">All</option>
             {glass.map((glass, index) => (
-              <option key={index} value={glass}>
-                {glass}
+              <option key={index} value={glass.strGlass}>
+                {glass.strGlass}
               </option>
             ))}
           </Form.Select>
@@ -75,15 +74,14 @@ const AllCocktails = () => {
           <Form.Select aria-label="Select category" onChange={handleSelectedCategory}>
             <option value="">All</option>
             {category.map((category, index) => (
-              <option key={index} value={category}>
-                {category}
+              <option key={index} value={category.strCategory}>
+                {category.strCategory}
               </option>
             ))}
           </Form.Select>
         </Form>
-
-
- 
+        </>)
+      }
       </div>
 
       <div className="col-sm-9 p-3 content-products">
