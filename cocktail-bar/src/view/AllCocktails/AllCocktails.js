@@ -7,37 +7,82 @@ import Loading from "../../components/Loading/Loading";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import Form from 'react-bootstrap/Form';
 import useSearchAllDrinks from "../../useSearchAllDrinks";
+import useFetch from "../../useFetch";
 
 const AllCocktails = () => {
     const {
         data,
         isLoading,
         isError,
-        // searchCocktail,
-      } = useSearchAllDrinks();
-      // console.log(data)
+        count,
+        searchCocktail
+      } = useGlobalContext();
     
       const [displayGrid, setDisplayGrid] = useState("true");
-      // const [selectedLetter, setSelectedLetter] = useState('A');
-      // const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+
+      const glass =['Cocktail glass', 
+      'Champagne flute', 
+      'Martini glass', 
+      'Old-fashioned glass', 
+      'Highball Glass', 
+      'Coffee mug', 
+      'Collins glass', 
+      'Shot glass',
+      'Irish coffee cup'];
+      const [selectedGlass, setSelectedGlass] = useState('');
+
+      const category = ['Ordinary Drink', 'Cocktail', 'Cocoa', 'Shot'];
+      const [selectedCategory, setSelectedCategory] = useState('');
     
-      // const handleSelectChange = (e) => {
-      //   setSelectedLetter(e.target.value);
-      //   searchCocktail('f=' + e.target.value);
-      // };
+      const handleSelectedGlass = (e) => {
+        setSelectedGlass(e.target.value);
+        searchCocktail('g=' + e.target.value, true);
+      };
+
+      const handleSelectedCategory = (e) => {
+        setSelectedCategory(e.target.value);
+        searchCocktail('c=' + e.target.value, true);
+      };
     
-      // useEffect(() => {
-      //   if (selectedLetter) {
-      //     searchCocktail(`f=${selectedLetter}`);
-      //   } else {
-      //     searchCocktail("f=a");
-      //   }
-      // }, [selectedLetter, searchCocktail]);
+      useEffect(() => {
+        if (selectedGlass) {
+          searchCocktail(`g=${selectedGlass}`, true);
+        }
+        else if(selectedCategory){
+          searchCocktail(`c=${selectedCategory}`, true)
+        } else {
+          //di default non sto cercando tramite nessn filtro
+          searchCocktail("", false);
+        }
+      }, [selectedGlass, searchCocktail]);
     
   return (
     <div className="d-flex">
-      <div className="col-3 p-3 mb-2 filters">lista di filtri
-      
+      <div className="col-3 p-3 mb-2 filters">
+      <label>Tipo di bicchiere</label>
+      <Form>
+          <Form.Select aria-label="Select glass" onChange={handleSelectedGlass}>
+            <option value="">All</option>
+            {glass.map((glass, index) => (
+              <option key={index} value={glass}>
+                {glass}
+              </option>
+            ))}
+          </Form.Select>
+        </Form>
+        <label>Categoria</label>
+        <Form>
+          <Form.Select aria-label="Select category" onChange={handleSelectedCategory}>
+            <option value="">All</option>
+            {category.map((category, index) => (
+              <option key={index} value={category}>
+                {category}
+              </option>
+            ))}
+          </Form.Select>
+        </Form>
+
+
  
       </div>
 
@@ -76,7 +121,7 @@ const AllCocktails = () => {
                   ) : isError ? (
                     <ErrorMessage>Nessun Cocktail Trovato</ErrorMessage>
                   ) : data && data && data.length > 0 ?(
-                    <Cocktails data={data} />
+                    <Cocktails data={data} count={count} />
                   ) : null
               ) : (
                 <p> altra lista di cocktail in lista</p>
