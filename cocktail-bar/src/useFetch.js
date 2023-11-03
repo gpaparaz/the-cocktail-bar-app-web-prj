@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 const searchUrl = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?";
+const searchByName = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s='
 
 const useFetch = (query, type) => {
   const [isLoading, setIsLoading] = useState(true);
@@ -25,8 +26,14 @@ const useFetch = (query, type) => {
               setIsError(false)
             }
         }
-        else {
+        else if( type === true) {
         const response = await axios.get(`${searchUrl}${query}`);
+        setData(response.data.drinks);
+        setCount(response.data.drinks.length);
+        }
+        //cerca per testo
+        else if( type === null){
+          const response = await axios.get(`${searchByName}${query}`);
         setData(response.data.drinks);
         setCount(response.data.drinks.length);
         }
