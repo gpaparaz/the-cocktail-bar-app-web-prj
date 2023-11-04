@@ -16,6 +16,10 @@ const links = [
     text: "Cocktals",
   },
   {
+    url:"/about",
+    text:"About us"
+  },
+  {
     url:"/contacts",
     text: "Contatti"
   }
