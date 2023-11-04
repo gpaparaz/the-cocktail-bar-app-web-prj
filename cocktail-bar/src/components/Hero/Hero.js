@@ -1,6 +1,6 @@
 import React from 'react'
-import defaultImage from "../../assets/image/home-hero.jpg";
-import styke from './hero.css'
+import defaultImage from "../../assets/image/default.jpg";
+import style from './hero.css'
 
 const Hero = ({ children, img }) => {
     const image = img ? img : defaultImage;

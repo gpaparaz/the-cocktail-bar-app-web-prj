@@ -9,19 +9,19 @@ import Cocktails from "../../components/Cocktails/Cocktails";
 import style from "./home.css";
 import info from '../../utils/info.json'
 import Reviews from "../../components/Reviews/Reviews";
+import heroHome from '../../assets/image/hero-home.jpg'
 
 const Home = () => {
   const numberOfRequests = 8;
 
   const { isLoading, data, isError } = useMultipleFetch(numberOfRequests);
 
-  
   const reviews = info.reviews.slice(-3);
   console.log(reviews)
 
   return (
     <section>
-      <Hero>
+      <Hero img = {heroHome}>
         <div className="home-hero">
           <div className="home-hero-text">
             <div className="home-hero-title">
