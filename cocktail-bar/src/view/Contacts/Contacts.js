@@ -1,11 +1,12 @@
 import React from 'react'
 import style from './contacts.css'
 import Hero from '../../components/Hero/Hero'
+import contactsHero from '../../assets/image/contacts-hero.jpg'
 
 const Contacts = () => {
   return (
     <section>
-      <Hero>
+      <Hero img = {contactsHero}>
         <div className="home-hero">
           <div className="home-hero-text">
             <div className="home-hero-title">

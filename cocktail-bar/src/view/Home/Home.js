@@ -21,7 +21,7 @@ const Home = () => {
 
   return (
     <section>
-      <Hero img = {heroHome}>
+      <Hero img = {heroHome} disableOverlay = {true}>
         <div className="home-hero">
           <div className="home-hero-text">
             <div className="home-hero-title">

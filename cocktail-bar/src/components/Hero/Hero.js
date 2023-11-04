@@ -2,7 +2,7 @@ import React from 'react'
 import defaultImage from "../../assets/image/default.jpg";
 import style from './hero.css'
 
-const Hero = ({ children, img }) => {
+const Hero = ({ children, img, disableOverlay }) => {
     const image = img ? img : defaultImage;
     return (
       <div
@@ -14,7 +14,7 @@ const Hero = ({ children, img }) => {
           backgroundSize: "cover",
         }}
       >
-        <div className="hero-overlay" >
+        <div className={!disableOverlay ? "hero-overlay" : ""} >
           <div className="container hero-container">{children}</div>
         </div>
       </div>
