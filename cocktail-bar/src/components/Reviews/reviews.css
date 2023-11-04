@@ -1,0 +1,12 @@
+.userReview {
+    width: 50px;
+  }
+  
+  .review {
+    background-color: black;
+    padding: 15px 20px;
+    border-radius: 10px;
+    color: var(--bs-primary-text);
+    width: 30%;
+  }
+  

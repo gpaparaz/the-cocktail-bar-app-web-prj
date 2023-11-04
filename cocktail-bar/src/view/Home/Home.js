@@ -7,12 +7,17 @@ import Loading from "../../components/Loading/Loading";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import Cocktails from "../../components/Cocktails/Cocktails";
 import style from "./home.css";
+import info from '../../utils/info.json'
+import Reviews from "../../components/Reviews/Reviews";
 
 const Home = () => {
-  const numberOfRequests = 6;
+  const numberOfRequests = 8;
 
   const { isLoading, data, isError } = useMultipleFetch(numberOfRequests);
-  console.log(data);
+
+  
+  const reviews = info.reviews.slice(-3);
+  console.log(reviews)
 
   return (
     <section>
@@ -44,6 +49,17 @@ const Home = () => {
         ) : data && data.length > 0 ? (
           <Cocktails data={data} />
         ) : null}
+      </div>
+
+      <div className="container-sm">
+        <h2 className="mt-5">Ultime recensioni</h2>
+        <div className="d-flex flex-wrap justify-content-center">
+          {
+            reviews.map((review) => {
+              return <Reviews key={review.id} review={review} showUserAvatar={false} />
+            })
+          }
+          </div>
       </div>
     </section>
   );

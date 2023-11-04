@@ -1,0 +1,109 @@
+{
+  "reviews": [
+    {
+      "id": 1,
+      "name": "Leslie P.",
+      "date": "25 ottobre 2019",
+      "stars": 5,
+      "content": "Siamo contenti di aver provato questo locale. L'atmosfera è molto bella, rustica ma elegante al tempo stesso e fuori c'è un sacco di spazio. Il cibo è veramente ottimo e il servizio è eccellente, la cameriera era solerte e molto simpatica. La prossima volta torniamo per un aperitivo e non vediamo l'ora di provarlo anche d'estate per stare fuori all'aperto. Consigliato!"
+    },
+    {
+      "id": 2,
+      "name": "Giulss",
+      "date": "5 marzo 2019",
+      "stars": 5,
+      "content": "Mi sono recata qui per un compleanno e devo dire che è stata davvero una bella scoperta!"
+    },
+    {
+      "id": 3,
+      "name": "Marty",
+      "date": "30 settembre 2019",
+      "stars": 5,
+      "content": "Abbiamo cenato in questo cocktail bar con una suggestiva atmosfera da pub inglese, personale gentile e menù da pub ma con rivisitazioni particolari"
+    },
+    {
+      "id": 4,
+      "name": "Paolo P.",
+      "date": "7 maggio 2019",
+      "stars": 5,
+      "content": "Un cocktail bar di qualità eccelsa non convenzionale che adoro! Chi vuole mangiare bene è sempre ben disposto a pagare di più!"
+    },
+    {
+      "id": 5,
+      "name": "Manu",
+      "date": "10 aprile 2019",
+      "stars": 5,
+      "content": "Tutto buono e tanto gentili. Mi piace tanto questo posto, la qualità è alta e anche la cura con cui viene gestito il pub. Apprezzo anche il ritmo con cui si muovono le persone che servono ai tavoli, la presenza del gestore sempre in prima linea e la voglia di fare bene. Bravi veramente!"
+    },
+    {
+      "id": 6,
+      "name": "Mattia",
+      "date": "20 maggio 2019",
+      "stars": 2,
+      "content": "Scendete dal piedistallo , se dovete far pagare tanto , mettetela la qualità"
+    },
+    {
+      "id": 7,
+      "name": "Marta F.",
+      "date": "10 luglio 2020",
+      "stars": 4,
+      "content": "Io e il mio compagno siamo stati qui con un'altra coppia di amici. Personale cordiale e disponibile, cibo di qualità. All'interno è molto bello e caratteristico. Sicuramente ci torneremo."
+    },
+    {
+      "id": 8,
+      "name": "Vittoria",
+      "date": "20 ottobre 2020",
+      "stars": 5,
+      "content": "Mia figlia ha festeggiato i 18 anni nella saletta da poco ristrutturata al piano terra. Mixer e tablet a disposizione per la musica, cibo molto buono e abbondante (era un dopo-cena, hanno preparato mini hamburger e mini club sandwich, più fritti e arrosticini), titolare molto disponibile e attento."
+    },
+    {
+      "id": 9,
+      "name": "La barbie",
+      "date": "5 novembre 2020",
+      "stars": 4,
+      "content": "Scegliamo questo locale, poco distante dal Palazzo della Ragione, per fare aperitivo provando un po' di cicchetti. La scelta è davvero ampia, c'è l'imbarazzo della scelta, tutti gustosi ed invitanti! Accompagnamo il tutto con un buon spritz ed un calice di bollicine. Prezzi nella media, personale gentile. Ci ritornerei!"
+    },
+    {
+      "id": 10,
+      "name": "Martina G.",
+      "date": "15 dicembre 2020",
+      "stars": 5,
+      "content": "Leggendo le recensioni abbiamo scelto questo posto per fare un aperitivo. Abbiamo assaggiato dei buonissimi cicchetti e delle ottime sarde in saor. Tutto buonissimo e a prezzi contenuti."
+    },
+    {
+      "id": 11,
+      "name": "Sinister",
+      "date": "",
+      "stars": 5,
+      "content": "Veramente ben servito, cicchetti ottimi, Ingredienti gustosissimi! E la pizza veramente fragrante! Ritorneremo. Andateci che non vi pentirete!"
+    },
+    {
+      "id": 12,
+      "name": "Antonella F.",
+      "date": "30 gennaio 2021",
+      "stars": 5,
+      "content": "Posto a me sconosciuto prima di oggi,posto che consiglio,posto che se non se ci capiti,non puoi godere di cibo di qualità che al palato fa far festa alle papille gustative,dove lo spritz e’ spritz ragazzi gentili e davvero tanta tanta qualità una goduria ad ogni morso ci ritorneremo"
+    },
+    {
+      "id": 13,
+      "name": "",
+      "date": "5 febbraio 2021",
+      "stars": 3,
+      "content": "Polpette e vino molto buoni, niente da dire. Ma abbiamo aspettato 4 polpettine per 45 minuti perché avevano sbagliato a gestire gli ordini per ben due volte, le polpette sono andate a due tavoli diversi"
+    },
+    {
+      "id": 14,
+      "name": "Sonia",
+      "date": "30 marzo 2021",
+      "stars": 5,
+      "content": "Cicchetti veranente ottimi. Locale caratteristico, in centro. No servizio al tavolo. Personale cortese."
+    },
+    {
+      "id": 15,
+      "name": "Marco E.",
+      "date": "20 aprile 2021",
+      "stars": 5,
+      "content": "Ottimo Spritz e cicchetti a gogò. Locale piccolo, ma molto bello. Personale accogliente e professionale. Da consigliare e ritornarci."
+    }
+  ]
+}
