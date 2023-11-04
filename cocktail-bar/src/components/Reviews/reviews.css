@@ -7,6 +7,10 @@
     padding: 15px 20px;
     border-radius: 10px;
     color: var(--bs-primary-text);
+  }
+  
+  .cardWidth {
     width: 30%;
+
   }
   

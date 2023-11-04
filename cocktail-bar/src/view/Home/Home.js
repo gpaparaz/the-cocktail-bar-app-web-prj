@@ -17,7 +17,6 @@ const Home = () => {
   const { isLoading, data, isError } = useMultipleFetch(numberOfRequests);
 
   const reviews = info.reviews.slice(-3);
-  console.log(reviews)
 
   return (
     <section>

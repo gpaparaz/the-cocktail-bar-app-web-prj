@@ -1,11 +1,16 @@
-import React from 'react'
-import heroAbout from '../../assets/image/hero-about-2.jpg'
-import Hero from '../../components/Hero/Hero'
+import React from "react";
+import heroAbout from "../../assets/image/hero-about-2.jpg";
+import Hero from "../../components/Hero/Hero";
+import info from '../../utils/info.json'
+import user from "../../assets/image/user.png";
+import { BsFillStarFill } from "react-icons/bs";
+import Reviews from "../../components/Reviews/Reviews";
 
 const About = () => {
+  const reviews = info.reviews;
   return (
     <section>
-        <Hero img = {heroAbout}>
+      <Hero img={heroAbout}>
         <div className="home-hero">
           <div className="home-hero-text">
             <div className="home-hero-title">
@@ -21,8 +26,14 @@ const About = () => {
           </div>
         </div>
       </Hero>
+      <div className="container-sm">
+        <h2>Recensioni locale</h2>
+        {reviews.map((review) => {
+          return <Reviews review={review} showUserAvatar={true} isFullWidth={true} />
+        })}
+      </div>
     </section>
-  )
-}
+  );
+};
 
-export default About
+export default About;

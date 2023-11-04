@@ -21,7 +21,7 @@ const Contacts = () => {
             </p>
           
           </div>
-        </div>
+        </div> 
       </Hero>
     </section>
   )
