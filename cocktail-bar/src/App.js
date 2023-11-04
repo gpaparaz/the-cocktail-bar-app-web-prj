@@ -6,6 +6,7 @@ import AllCocktails from './view/AllCocktails/AllCocktails';
 import Home from './view/Home/Home';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import SingleCocktailPage from './view/SingleCocktailPage/SingleCocktailPage';
+import Contacts from './view/Contacts/Contacts';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Route path='/' element={<Home />} />
       <Route path='/cocktails' element={<AllCocktails />} />
       <Route path='/cocktail/:id' element={<SingleCocktailPage />} />
+      <Route path='/contacts' element={<Contacts />} />
     </Routes>
     <Footer />
   </Router>

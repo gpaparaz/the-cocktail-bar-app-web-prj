@@ -15,6 +15,10 @@ const links = [
     url: "/cocktails",
     text: "Cocktals",
   },
+  {
+    url:"/contacts",
+    text: "Contatti"
+  }
   
 ];
 
