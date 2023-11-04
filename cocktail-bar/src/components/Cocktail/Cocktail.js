@@ -13,8 +13,9 @@ const Cocktail = ({ strDrinkThumb: img, idDrink: _id, strDrink: name }) => {
 
   return (
     <div className="single-cocktail">
-      <div onClick={() => goToCocktail(_id)}
-        className='img'
+      <div
+        onClick={() => goToCocktail(_id)}
+        className="img"
         style={{
           backgroundImage: `url(${img})`,
           backgroundPosition: "center",
@@ -22,27 +23,24 @@ const Cocktail = ({ strDrinkThumb: img, idDrink: _id, strDrink: name }) => {
           backgroundRepeat: "no-repeat",
         }}
       />
-      <div className="card-text container"
-      >
+      <div className="card-text container">
         <h5>{name}</h5>
-        <div
-          className='see-more-btn brand-color'          
-        >
+        <div className="see-more-btn brand-color">
           <h5>Ricetta</h5>
-          <HiClipboardList className='icon ' />
+          <HiClipboardList className="icon " />
         </div>
       </div>
-      <div className='card-text-sm container'>
+      <div className="card-text-sm container">
         <h5>{name}</h5>
         <div
-          className='see-more-btn brand-color'
+          className="see-more-btn brand-color"
           onClick={() => goToCocktail(_id)}
         >
           <h5>Ricetta</h5>
-          <HiClipboardList className='icon ' />
+          <HiClipboardList className="icon " />
         </div>
       </div>
-      </div>
+    </div>
   );
 };
 

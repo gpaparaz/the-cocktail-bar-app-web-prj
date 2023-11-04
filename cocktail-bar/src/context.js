@@ -4,9 +4,9 @@ import useFetch from "./useFetch";
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
-    const [query, setQuery] = useState("");
-    const [type, setType] = useState(false);
-    const { isLoading, data, isError, count } = useFetch(`${query}`, type);
+  const [query, setQuery] = useState("");
+  const [type, setType] = useState(false);
+  const { isLoading, data, isError, count } = useFetch(`${query}`, type);
 
   //stati e funzioni che gestiscono la sidebar
   const [isSidebarOpen, setSidebarOpen] = useState(false);
@@ -17,8 +17,8 @@ const AppProvider = ({ children }) => {
     setSidebarOpen(false);
   };
 
-   //Cerca cocktail: Quando cambia Query, ho un nuovo rendere di useFetch
-   const searchCocktail = (input, type) => {
+  //Cerca cocktail: Quando cambia Query, ho un nuovo rendere di useFetch
+  const searchCocktail = (input, type) => {
     setQuery(input);
     setType(type);
   };
@@ -34,7 +34,7 @@ const AppProvider = ({ children }) => {
         count,
         query,
         data,
-        searchCocktail
+        searchCocktail,
       }}
     >
       {children}

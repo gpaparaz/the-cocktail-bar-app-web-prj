@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react';
-import axios from 'axios';
+import { useState, useEffect } from "react";
+import axios from "axios";
 
-const endpoint = 'https://www.thecocktaildb.com/api/json/v1/1/random.php';
+const endpoint = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
 
 const useMultipleFetch = (numberOfRequests) => {
   const [data, setData] = useState([]);
@@ -28,8 +28,8 @@ const useMultipleFetch = (numberOfRequests) => {
     };
 
     if (data.length === 0) {
-        fetchData();
-      }
+      fetchData();
+    }
   }, [numberOfRequests, data]);
 
   return { isLoading, data, isError };

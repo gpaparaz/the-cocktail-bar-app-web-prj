@@ -27,38 +27,37 @@ const AllCocktails = () => {
   const handleSelectedGlass = (e) => {
     const selectedGlass = e.target.value;
     setSelectedGlass(selectedGlass);
-    if(selectedGlass === "")
-    searchCocktail("", false);
-  else{
-
-    if (selectedCategory !== "") {
-      setSelectedCategory("");
-      searchCocktail(`g=${selectedGlass}`, true);
-    } else {
-      searchCocktail(`g=${selectedGlass}`, true);
-    }}
+    if (selectedGlass === "") searchCocktail("", false);
+    else {
+      if (selectedCategory !== "") {
+        setSelectedCategory("");
+        searchCocktail(`g=${selectedGlass}`, true);
+      } else {
+        searchCocktail(`g=${selectedGlass}`, true);
+      }
+    }
   };
 
   const handleSelectedCategory = (e) => {
     const selectedCategory = e.target.value;
     setSelectedCategory(selectedCategory);
 
-    if(selectedCategory === ""){
+    if (selectedCategory === "") {
       searchCocktail("", false);
-    }else{
-
-    if (selectedGlass !== "") {
-      setSelectedGlass("");
-      searchCocktail(`c=${selectedCategory}`, true);
     } else {
-      searchCocktail(`c=${selectedCategory}`, true);
-    }}
+      if (selectedGlass !== "") {
+        setSelectedGlass("");
+        searchCocktail(`c=${selectedCategory}`, true);
+      } else {
+        searchCocktail(`c=${selectedCategory}`, true);
+      }
+    }
   };
-  
+
   const resetFilters = () => {
     setSelectedCategory("");
     setSelectedGlass("");
-    setInput("")
+    setInput("");
     searchCocktail("", false);
   };
 
@@ -69,7 +68,6 @@ const AllCocktails = () => {
       searchCocktail("", false);
     }
   };
-
 
   const handleSubmit = (e) => {
     setSelectedGlass("");

@@ -1,38 +1,36 @@
-import React from 'react'
-import style from './singleCocktailPage.css'
+import React from "react";
+import style from "./singleCocktailPage.css";
 import Loading from "../../components/Loading/Loading";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import { BsArrowLeftShort } from "react-icons/bs";
-import {IoArrowBackCircleSharp} from "react-icons/io5";
+import { IoArrowBackCircleSharp } from "react-icons/io5";
 import { useParams, Link } from "react-router-dom";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import Cocktails from '../../components/Cocktails/Cocktails';
-import useFetchByIdAndIngredient from '../../useFetchByIdAndIngredient';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+import Cocktails from "../../components/Cocktails/Cocktails";
+import useFetchByIdAndIngredient from "../../useFetchByIdAndIngredient";
 
 const SingleCocktailPage = () => {
-
   const { id } = useParams();
-  const { data, isLoading, isError, ingredientsList } = useFetchByIdAndIngredient(id)
+  const { data, isLoading, isError, ingredientsList } =
+    useFetchByIdAndIngredient(id);
 
   if (isLoading) {
-    return (
-        <Loading />
-    );
+    return <Loading />;
   }
   if (isError) {
     return (
-        <div className="cocktail-content container">
-          <header>
-            <Link to="/">
-              <BsArrowLeftShort className="icon" />
-            </Link>
-            <h4 className="back-arrow">Torna in Home</h4>
-          </header>
-          <ErrorMessage>Cocktail Non Disponibile</ErrorMessage>
-        </div>
+      <div className="cocktail-content container">
+        <header>
+          <Link to="/">
+            <BsArrowLeftShort className="icon" />
+          </Link>
+          <h4 className="back-arrow">Torna in Home</h4>
+        </header>
+        <ErrorMessage>Cocktail Non Disponibile</ErrorMessage>
+      </div>
     );
   }
 
@@ -64,80 +62,76 @@ const SingleCocktailPage = () => {
     { istruzione: strIngredient5, qty: strMeasure5 },
   ];
 
-
   const style = {
     backgroundImage: ` linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${image})`,
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
-    height: '90vh'
-  }
+    height: "90vh",
+  };
 
   return (
     <>
-    
-    <div style= {style}>
-    <Swiper
-    direction={'vertical'}
-    pagination={{
-      clickable: true,
-    }}
-    modules={[Pagination]}
-    className="mySwiper"
-  >
-    <SwiperSlide >
-      <div className="cocktail-datails">
-             <div className="spacer">
-               <h2>{name}</h2>
-               <div className="cocktail-type">
-                <p className="label">{type}</p>
-                 <p className="label">{category}</p>
-                 <p className="label">{strGlass}</p>
+      <div style={style}>
+        <Swiper
+          direction={"vertical"}
+          pagination={{
+            clickable: true,
+          }}
+          modules={[Pagination]}
+          className="mySwiper"
+        >
+          <SwiperSlide>
+            <div className="cocktail-datails">
+              <div className="spacer">
+                <h2>{name}</h2>
+                <div className="cocktail-type">
+                  <p className="label">{type}</p>
+                  <p className="label">{category}</p>
+                  <p className="label">{strGlass}</p>
+                </div>
               </div>
-             </div>
-             </div>
-             </SwiperSlide>
-    <SwiperSlide >
-    <h4>Ingredienti :</h4>
-               <ul className="instruction-list">
-                 {strInstructionsList.map((el, index) => {
-                  if (el.istruzione) {
-                    return (
-                      <li key={index}>
-                        <p className="info">
-                          {el.qty} {el.istruzione}
-                        </p>
-                      </li>
-                    );
-                  }
-                })}
-              </ul>
-      </SwiperSlide>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <h4>Ingredienti :</h4>
+            <ul className="instruction-list">
+              {strInstructionsList.map((el, index) => {
+                if (el.istruzione) {
+                  return (
+                    <li key={index}>
+                      <p className="info">
+                        {el.qty} {el.istruzione}
+                      </p>
+                    </li>
+                  );
+                }
+              })}
+            </ul>
+          </SwiperSlide>
 
-      <SwiperSlide >
-      <h4>Istruzioni :</h4>
-               <p className="info">
-                 {strInstructionsIT ? strInstructionsIT : strInstructions}
-               </p>
-      </SwiperSlide>
-  </Swiper>
-  </div>
-  <section>
-    <h3>Altri drink simili</h3>
-  <div className="container-sm px-5">
-        {isLoading ? (
-          <Loading />
-        ) : isError ? (
-          <ErrorMessage>Nessun Cocktail Trovato</ErrorMessage>
-        ) : ingredientsList && ingredientsList.length > 0 ? (
-          <Cocktails data={ingredientsList} />
-        ) : null}
+          <SwiperSlide>
+            <h4>Istruzioni :</h4>
+            <p className="info">
+              {strInstructionsIT ? strInstructionsIT : strInstructions}
+            </p>
+          </SwiperSlide>
+        </Swiper>
       </div>
-  </section>
-  </>
-   
+      <section>
+        <h3>Altri drink simili</h3>
+        <div className="container-sm px-5">
+          {isLoading ? (
+            <Loading />
+          ) : isError ? (
+            <ErrorMessage>Nessun Cocktail Trovato</ErrorMessage>
+          ) : ingredientsList && ingredientsList.length > 0 ? (
+            <Cocktails data={ingredientsList} />
+          ) : null}
+        </div>
+      </section>
+    </>
   );
+};
 
-}
-
-export default SingleCocktailPage
+export default SingleCocktailPage;
