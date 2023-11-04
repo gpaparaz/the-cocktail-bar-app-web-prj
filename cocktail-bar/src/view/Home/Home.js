@@ -52,6 +52,7 @@ const Home = () => {
 
       <div className="container-sm">
         <h2 className="mt-5">Ultime recensioni</h2>
+        <Link to="/about#reviews">Vai alla sezione delle recensioni</Link>
         <div className="d-flex flex-wrap justify-content-center">
           {
             reviews.map((review) => {
