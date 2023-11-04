@@ -7,6 +7,19 @@
     display: -webkit-flex;
     display: -ms-flex;
     align-items: center;
+
+    position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: background-color 0.3s;
+  background-color: transparent;
+  }
+
+  .nav-scrolled {
+    background-color: black; /* Colore di sfondo desiderato */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Esempio di ombra */
   }
   
   .nav-header {
@@ -23,7 +36,7 @@
   
   .nav-brand {
     margin-bottom: 0.1rem;
-    color: var(--trypan-blue-2);
+    color: var(--bs-text-color);
     text-transform: lowercase;
     font-variant: small-caps;
   }
@@ -65,11 +78,11 @@
   }
   
   .nav-item {
-    transition: var(--btn-transition);
+    transition: var(--bs-text-color);
   }
   
   .nav-item:hover {
-    color: var(--flickr-pink);
+    color: var(--bs-text-color);
   }
   
   .container {
@@ -126,6 +139,14 @@
       -webkit-justify-content: space-between;
       -ms-justify-content: space-between;
       justify-content: space-between;
+    }
+
+    .nav-link {
+      color: var(--bs-text-color);
+    }
+
+    .nav-link:hover {
+      color: var(--bs-secondary-color);
     }
   
     .nav-icon {

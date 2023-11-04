@@ -14,7 +14,7 @@ const Hero = ({ children, img, disableOverlay }) => {
           backgroundSize: "cover",
         }}
       >
-        <div className={!disableOverlay ? "hero-overlay" : ""} >
+        <div className={!disableOverlay ? "hero-overlay" : "content-position"} >
           <div className="container hero-container">{children}</div>
         </div>
       </div>

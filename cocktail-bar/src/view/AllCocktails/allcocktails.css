@@ -28,3 +28,18 @@
     background-color: #dd092f;
     color: white;
 }
+
+.cocktailsContent {
+    margin-top: 6em;
+}
+
+.icon-search {
+    background-color: white;
+    border: none;
+    color: var(--bs-primary);
+}
+
+#drink {
+    border:none;
+    color: var(--dark-text-color);
+}

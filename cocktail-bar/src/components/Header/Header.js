@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useGlobalContext } from "../../context";
 import { LinkComponent, SocialComponent } from '../../utils/links';
 import { FaBars } from 'react-icons/fa';
@@ -8,6 +8,25 @@ import style from './header.css'
 const Header = () => {
 
   const { openSidebar } = useGlobalContext();
+
+  useEffect(() => {
+    // Funzione che gestisce lo scroll
+    const handleScroll = () => {
+      const nav = document.querySelector('.nav');
+      if (window.scrollY > 20) {
+        nav.classList.add('nav-scrolled');
+      } else {
+        nav.classList.remove('nav-scrolled');
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+
   return (
     <nav className="nav">
       <div className="container nav-container">

@@ -19,7 +19,7 @@ const Home = () => {
   const reviews = info.reviews.slice(-3);
 
   return (
-    <section>
+    <section className="mb-5">
       <Hero img = {heroHome} disableOverlay = {true}>
         <div className="home-hero">
           <div className="home-hero-text">

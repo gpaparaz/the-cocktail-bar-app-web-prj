@@ -1,0 +1,19 @@
+footer {
+    background-color: rgb(39, 39, 39);
+    color: var(--bs-text-color);
+    padding-top: 30px;
+  }
+  
+  .courierLogo {
+    width: 100px;
+    height: fit-content;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .footerBottom {
+    background-color:rgb(27, 27, 27);
+    padding: 10px 0px;
+    color: var(--bs-text-color);
+  }
+  

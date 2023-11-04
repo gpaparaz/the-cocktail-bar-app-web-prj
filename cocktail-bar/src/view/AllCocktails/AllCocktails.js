@@ -77,7 +77,7 @@ const AllCocktails = () => {
   };
 
   return (
-    <div className="d-flex">
+    <section className="d-flex cocktailsContent">
       <div className="col-3 p-3 mb-2 filters">
         <button className="btn btn-secondary" onClick={resetFilters}>
           Reset filtri{" "}
@@ -89,7 +89,7 @@ const AllCocktails = () => {
           <>
             <Form className="my-3">
               <label>Tipo di bicchiere</label>
-              <Form.Select
+              <Form.Select className="form-control"
                 aria-label="Select glass"
                 onChange={(e) => {
                   handleToggle(e.target.value !== "");
@@ -107,7 +107,7 @@ const AllCocktails = () => {
             </Form>
             <Form className="my-3">
               <label>Categoria drink </label>
-              <Form.Select
+              <Form.Select className="form-control"
                 aria-label="Select category"
                 onChange={(e) => {
                   handleToggle(e.target.value !== "");
@@ -129,16 +129,17 @@ const AllCocktails = () => {
                 <h4>Cerca il tuo drink</h4>
               </label>
               <div className="input-search">
+              <div class="input-group">
                 <input
                   id="drink"
-                  className="input"
+                  className="input form-control"
                   placeholder="Cerca per nome"
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
-                />
-                <button className="btn icon-btn" type="submit">
-                  <FaSearch className="icon" />
-                </button>
+                  />
+                <span class="input-group-text icon-search"><FaSearch className="icon" /></span>
+                  </div>
+                
               </div>
             </form>
           </>
@@ -189,7 +190,7 @@ const AllCocktails = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

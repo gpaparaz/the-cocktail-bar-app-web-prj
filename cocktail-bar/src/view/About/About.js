@@ -1,5 +1,5 @@
 import React from "react";
-import heroAbout from "../../assets/image/hero-about-2.jpg";
+import heroAbout from "../../assets/image/hero-about-2.png";
 import Hero from "../../components/Hero/Hero";
 import info from '../../utils/info.json'
 import user from "../../assets/image/user.png";

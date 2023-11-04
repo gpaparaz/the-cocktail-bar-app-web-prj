@@ -128,3 +128,30 @@ p {
     line-height: 1;
   }
 }
+
+
+.form-control {
+
+    color: var(--dark-text-color);
+    background-color: var(--bs-body-bg);
+    border: var(--bs-border-width) solid var(--bs-primary);
+   
+    border-radius: var(--bs-border-radius);
+}
+
+.form-select:focus {
+  border-color: var(--bs-hover-color);
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(45, 253, 13, 0.25);
+}
+
+select option:checked {
+  color: var(--dark-text-color) !important;
+  background: var(--bs-secondary-color) !important;
+}
+
+select option:hover {
+  color: var(--dark-text-color) !important;
+  background: var(--bs-secondary-color) !important;
+}
+
