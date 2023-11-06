@@ -8,6 +8,7 @@ import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import Form from "react-bootstrap/Form";
 import useGetListOfFilters from "../../useGetListOfFilters";
 import { FaSearch } from "react-icons/fa";
+import CocktailsList from "../../components/CocktailsList/CocktailsList";
 
 const AllCocktails = () => {
   const { data, isLoading, isError, count, searchCocktail } =
@@ -182,11 +183,11 @@ const AllCocktails = () => {
                 ) : data && data && data.length > 0 ? (
                   <div>
                     <p>Prodotti disponibili: {count}</p>
-                    <Cocktails data={data} count={count} />
+                    <Cocktails data={data}  />
                   </div>
                 ) : null
               ) : (
-                <p> altra lista di cocktail in lista</p>
+                <CocktailsList data={data} />
               )}
             </div>
           </div>

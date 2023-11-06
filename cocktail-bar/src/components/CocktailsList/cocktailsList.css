@@ -1,0 +1,14 @@
+.imageList {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.cocktailList {
+    border-bottom: 1px solid var(--bs-secondary-color);
+    padding: 30px 0px;
+}
+
+.cocktailList:last-child{
+    border-bottom: none;
+}
