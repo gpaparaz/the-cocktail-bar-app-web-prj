@@ -172,16 +172,18 @@ const AllCocktails = () => {
             </div>
           </div>
 
-          <div className="row justify-content-center">
+          <div className="row">
             <div className="col">
               {displayGrid ? (
-                // <Cocktails data={data} />
                 isLoading ? (
                   <Loading />
                 ) : isError ? (
                   <ErrorMessage>Nessun Cocktail Trovato</ErrorMessage>
                 ) : data && data && data.length > 0 ? (
-                  <Cocktails data={data} count={count} />
+                  <div>
+                    <p>Prodotti disponibili: {count}</p>
+                    <Cocktails data={data} count={count} />
+                  </div>
                 ) : null
               ) : (
                 <p> altra lista di cocktail in lista</p>

@@ -67,7 +67,7 @@ const SingleCocktailPage = () => {
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
-    height: "90vh",
+    height: "100vh",
   };
 
   return (
@@ -118,7 +118,7 @@ const SingleCocktailPage = () => {
           </SwiperSlide>
         </Swiper>
       </div>
-      <section>
+      <div className="my-5 container-sm">
         <h3>Altri drink simili</h3>
         <div className="container-sm px-5">
           {isLoading ? (
@@ -129,7 +129,7 @@ const SingleCocktailPage = () => {
             <Cocktails data={ingredientsList} />
           ) : null}
         </div>
-      </section>
+      </div>
     </>
   );
 };
