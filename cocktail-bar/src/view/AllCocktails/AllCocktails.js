@@ -8,6 +8,7 @@ import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import Form from "react-bootstrap/Form";
 import useGetListOfFilters from "../../useGetListOfFilters";
 import { FaSearch } from "react-icons/fa";
+import { BsFillGrid3X3GapFill, BsViewStacked } from "react-icons/bs";
 import CocktailsList from "../../components/CocktailsList/CocktailsList";
 
 const AllCocktails = () => {
@@ -80,7 +81,7 @@ const AllCocktails = () => {
   return (
     <section className="d-flex cocktailsContent">
       <div className="col-3 p-3 mb-2 filters">
-        <button className="btn btn-secondary" onClick={resetFilters}>
+        <button className="btn btn-outline-secondary" onClick={resetFilters}>
           Reset filtri{" "}
         </button>
         <br />
@@ -90,7 +91,8 @@ const AllCocktails = () => {
           <>
             <Form className="my-3">
               <label>Tipo di bicchiere</label>
-              <Form.Select className="form-control"
+              <Form.Select
+                className="form-control"
                 aria-label="Select glass"
                 onChange={(e) => {
                   handleToggle(e.target.value !== "");
@@ -108,7 +110,8 @@ const AllCocktails = () => {
             </Form>
             <Form className="my-3">
               <label>Categoria drink </label>
-              <Form.Select className="form-control"
+              <Form.Select
+                className="form-control"
                 aria-label="Select category"
                 onChange={(e) => {
                   handleToggle(e.target.value !== "");
@@ -130,17 +133,18 @@ const AllCocktails = () => {
                 <h4>Cerca il tuo drink</h4>
               </label>
               <div className="input-search">
-              <div class="input-group">
-                <input
-                  id="drink"
-                  className="input form-control"
-                  placeholder="Cerca per nome"
-                  value={input}
-                  onChange={(e) => setInput(e.target.value)}
+                <div class="input-group">
+                  <input
+                    id="drink"
+                    className="input form-control"
+                    placeholder="Cerca per nome"
+                    value={input}
+                    onChange={(e) => setInput(e.target.value)}
                   />
-                <span class="input-group-text icon-search"><FaSearch className="icon" /></span>
-                  </div>
-                
+                  <span class="input-group-text icon-search">
+                    <FaSearch className="icon" />
+                  </span>
+                </div>
               </div>
             </form>
           </>
@@ -149,27 +153,21 @@ const AllCocktails = () => {
 
       <div className="col-sm-9 p-3 content-products">
         <div className="container">
-          <div className="row justify-content-center">
-            <div className="col">
-              <div className={style.switch}>
-                <div
-                  className={clsx(style.option, {
-                    [style.active]: displayGrid,
-                  })}
-                  onClick={() => setDisplayGrid(true)}
-                >
-                  Grid
-                </div>
+          <div className="d-flex flex-inline">
+            <div className={style.switch}>
+              <BsFillGrid3X3GapFill
+                className={clsx("option", {
+                  active: displayGrid,
+                })}
+                onClick={() => setDisplayGrid(true)}
+              />
 
-                <div
-                  className={clsx(style.option, {
-                    [style.active]: !displayGrid,
-                  })}
-                  onClick={() => setDisplayGrid(false)}
-                >
-                  Table
-                </div>
-              </div>
+              <BsViewStacked
+                className={clsx("option", {
+                  active: !displayGrid,
+                })}
+                onClick={() => setDisplayGrid(false)}
+              />
             </div>
           </div>
 
@@ -182,12 +180,15 @@ const AllCocktails = () => {
                   <ErrorMessage>Nessun Cocktail Trovato</ErrorMessage>
                 ) : data && data && data.length > 0 ? (
                   <div>
-                    <p>Prodotti disponibili: {count}</p>
-                    <Cocktails data={data}  />
+                    <p className="mt-5">Prodotti disponibili: {count}</p>
+                    <Cocktails data={data} />
                   </div>
                 ) : null
               ) : (
-                <CocktailsList data={data} />
+                <div>
+                  <p className="mt-5">Prodotti disponibili: {count}</p>
+                  <CocktailsList data={data} />
+                </div>
               )}
             </div>
           </div>
