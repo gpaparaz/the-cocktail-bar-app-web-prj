@@ -82,39 +82,43 @@ const SingleCocktailPage = () => {
           className="mySwiper"
         >
           <SwiperSlide>
-            <div className="cocktail-datails">
+            <div className="cocktail-hero">
               <div className="spacer">
-                <h2>{name}</h2>
+                <h1 className="cocktailName mb-3">{name}</h1>
                 <div className="cocktail-type">
-                  <p className="label">{type}</p>
-                  <p className="label">{category}</p>
-                  <p className="label">{strGlass}</p>
+                  <h3 className="label">{type}</h3>
+                  <h3 className="label">{category}</h3>
+                  <h3 className="label">{strGlass}</h3>
                 </div>
               </div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <h4>Ingredienti :</h4>
+          <div className="cocktail-datails">
+            <h3>Ingredienti:</h3>
             <ul className="instruction-list">
               {strInstructionsList.map((el, index) => {
                 if (el.istruzione) {
                   return (
                     <li key={index}>
-                      <p className="info">
+                      <h5 className="info">
                         {el.qty} {el.istruzione}
-                      </p>
+                      </h5>
                     </li>
                   );
                 }
               })}
             </ul>
+            </div>
           </SwiperSlide>
 
           <SwiperSlide>
-            <h4>Istruzioni :</h4>
-            <p className="info">
+          <div className="cocktail-datails">
+            <h3>Istruzioni:</h3>
+            <h5 className="info">
               {strInstructionsIT ? strInstructionsIT : strInstructions}
-            </p>
+            </h5>
+            </div>
           </SwiperSlide>
         </Swiper>
       </div>

@@ -34,10 +34,10 @@ const useFetchByIdAndIngredient = (id) => {
           );
           // console.log(ingredientsResult.data.drinks)
           if (ingredientsResult) {
-            //seleziono 6 drink a caso
+            //seleziono 8 drink a caso
             const firstFiveIngredients = ingredientsResult.data.drinks
               .sort(() => 0.5 - Math.random())
-              .slice(0, 6);
+              .slice(0, 8);
             setIngredientsList(firstFiveIngredients);
           }
           setLoading(false);

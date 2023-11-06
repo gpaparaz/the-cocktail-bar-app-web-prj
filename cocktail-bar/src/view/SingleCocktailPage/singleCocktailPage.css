@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=DM+Serif+Display:ital@0;1&family=Noto+Sans+JP:wght@300;400;500;600;700;800&display=swap');
+
 .swiper-vertical > .swiper-wrapper {
     height:100vh;
 }
@@ -9,6 +12,22 @@ box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 backdrop-filter: blur(4.9px);
 -webkit-backdrop-filter: blur(4.9px);
 border: 1px solid rgba(0, 0, 0, 0.3);
+display: flex !important;
+}
+
+.cocktail-hero {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    padding-left: 10em;
+}
+
+.cocktail-datails {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10em;
 }
 
 .swiper-pagination-clickable .swiper-pagination-bullet {
@@ -16,3 +35,10 @@ border: 1px solid rgba(0, 0, 0, 0.3);
     height: 30px;
 }
 
+.cocktailName {
+    font-family: 'Courgette', cursive;
+}
+
+.cocktail-type {
+    font-family: 'Noto Sans JP', sans-serif;
+}
