@@ -46,14 +46,17 @@ const Home = () => {
         ) : isError ? (
           <ErrorMessage>Nessun Cocktail Trovato</ErrorMessage>
         ) : data && data.length > 0 ? (
+          <>
+          <h2 className="mt-5">I drink del momento</h2>
           <Cocktails data={data} />
+          </>
         ) : null}
       </div>
 
       <div className="container-sm">
-        <h2 className="mt-5">Ultime recensioni</h2>
+        <h2 className="mt-5 mb-3">Ultime recensioni</h2>
         <Link to="/about#reviews">Vai alla sezione delle recensioni</Link>
-        <div className="d-flex flex-wrap justify-content-center">
+        <div className="d-flex flex-wrap justify-content-center mt-5">
           {
             reviews.map((review) => {
               return <Reviews key={review.id} review={review} showUserAvatar={false} />

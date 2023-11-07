@@ -153,23 +153,7 @@ const AllCocktails = () => {
 
       <div className="col-sm-9 p-3 content-products">
         <div className="container">
-          <div className="d-flex flex-inline">
-            <div className={style.switch}>
-              <BsFillGrid3X3GapFill
-                className={clsx("option", {
-                  active: displayGrid,
-                })}
-                onClick={() => setDisplayGrid(true)}
-              />
-
-              <BsViewStacked
-                className={clsx("option", {
-                  active: !displayGrid,
-                })}
-                onClick={() => setDisplayGrid(false)}
-              />
-            </div>
-          </div>
+          
 
           <div className="row">
             <div className="col">
@@ -180,14 +164,52 @@ const AllCocktails = () => {
                   <ErrorMessage>Nessun Cocktail Trovato</ErrorMessage>
                 ) : data && data && data.length > 0 ? (
                   <div>
-                    <p className="mt-5">Prodotti disponibili: {count}</p>
-                    <Cocktails data={data} />
+<div className="d-flex justify-content-between align-items-center">
+            <p className="mt-5">Prodotti disponibili: {count}</p>
+
+            <div className="d-flex flex-inline">
+              <div className={style.switch}>
+                <BsFillGrid3X3GapFill
+                  className={clsx("option", {
+                    active: displayGrid,
+                  })}
+                  onClick={() => setDisplayGrid(true)}
+                />
+
+                <BsViewStacked
+                  className={clsx("option", {
+                    active: !displayGrid,
+                  })}
+                  onClick={() => setDisplayGrid(false)}
+                />
+              </div>
+            </div>
+          </div>                    <Cocktails data={data} />
                   </div>
                 ) : null
               ) : (
                 <div>
-                  <p className="mt-5">Prodotti disponibili: {count}</p>
-                  <CocktailsList data={data} />
+<div className="d-flex justify-content-between align-items-center">
+            <p className="mt-5">Prodotti disponibili: {count}</p>
+
+            <div className="d-flex flex-inline">
+              <div className={style.switch}>
+                <BsFillGrid3X3GapFill
+                  className={clsx("option", {
+                    active: displayGrid,
+                  })}
+                  onClick={() => setDisplayGrid(true)}
+                />
+
+                <BsViewStacked
+                  className={clsx("option", {
+                    active: !displayGrid,
+                  })}
+                  onClick={() => setDisplayGrid(false)}
+                />
+              </div>
+            </div>
+          </div>                  <CocktailsList data={data} />
                 </div>
               )}
             </div>
