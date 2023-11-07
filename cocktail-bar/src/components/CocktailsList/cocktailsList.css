@@ -5,7 +5,7 @@
 }
 
 .cocktailList {
-    border-bottom: 1px solid var(--bs-secondary-color);
+    border-bottom: 1px solid var(--bs-hover-color);
     padding: 30px 0px;
 }
 

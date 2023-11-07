@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer>
       <div class="container mb-5">
-        <h4 class="mb-4">CocktailBar</h4>
+        <h4 class="mb-4 fs-3">Cocktail Bar</h4>
         <div class="d-flex">
           <div class="col-sm-3">
             <h5 class="fw-semibold">Link</h5>
@@ -21,12 +21,18 @@ const Footer = () => {
             <p>Via Mazzini 23</p>
             <p>35010, Padova (PD)</p>
           </div>
-          <div class="col-sm-3"></div>
+          <div class="col-sm-3">
+            <h5 class="fw-semibold">Orari di apertura</h5>
+            <span>Lun-Gio</span>
+            <p>16.30 - 23.00</p>
+            <span className="mt-1">Ven-Dom</span>
+            <p>16.30 - 02.00</p>
+          </div>
         </div>
       </div>
       <div class="d-flex align-items-center footerBottom flex-column">
-        <p>P.IVA: 12345678912345</p>
-        <p>Copyright 2023</p>
+        <p className="fs-7">P.IVA: 12345678912345</p>
+        <p className="fs-7">Copyright 2023</p>
       </div>
     </footer>
   );

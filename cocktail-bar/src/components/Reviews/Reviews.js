@@ -13,7 +13,7 @@ const Reviews = ({ review, showUserAvatar, isFullWidth }) => {
         <div className="flex-column mx-3">
           <div className="d-inline">
             {starsArray.map((_, index) => (
-              <BsFillStarFill key={index} />
+              <BsFillStarFill key={index} color="goldenrod"/>
             ))}
           </div>
           <p className="mt-2">{review.date}</p>

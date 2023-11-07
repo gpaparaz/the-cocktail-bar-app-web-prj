@@ -95,7 +95,7 @@ const SingleCocktailPage = () => {
           </SwiperSlide>
           <SwiperSlide>
           <div className="cocktail-datails">
-            <h3>Ingredienti:</h3>
+            <h3 className="mb-3">Ingredienti:</h3>
             <ul className="instruction-list">
               {strInstructionsList.map((el, index) => {
                 if (el.istruzione) {
@@ -114,7 +114,7 @@ const SingleCocktailPage = () => {
 
           <SwiperSlide>
           <div className="cocktail-datails">
-            <h3>Istruzioni:</h3>
+            <h3 className="mb-3">Istruzioni:</h3>
             <h5 className="info">
               {strInstructionsIT ? strInstructionsIT : strInstructions}
             </h5>

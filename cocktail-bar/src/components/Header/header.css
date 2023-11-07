@@ -146,7 +146,7 @@
     }
 
     .nav-link:hover {
-      color: var(--bs-secondary-color);
+      color: var(--bs-hover-color);
     }
   
     .nav-icon {

@@ -81,6 +81,7 @@ const AllCocktails = () => {
   return (
     <section className="d-flex cocktailsContent">
       <div className="col-3 p-3 mb-2 filters">
+        <h4>Filtri</h4>
         <button className="btn btn-outline-secondary" onClick={resetFilters}>
           Reset filtri{" "}
         </button>
@@ -100,7 +101,7 @@ const AllCocktails = () => {
                 }}
                 value={selectedGlass}
               >
-                <option value="">All</option>
+                <option value="">Tutti</option>
                 {glass.map((glass, index) => (
                   <option key={index} value={glass.strGlass}>
                     {glass.strGlass}
@@ -119,7 +120,7 @@ const AllCocktails = () => {
                 }}
                 value={selectedCategory}
               >
-                <option value="">All</option>
+                <option value="">Tutti</option>
                 {category.map((category, index) => (
                   <option key={index} value={category.strCategory}>
                     {category.strCategory}
@@ -130,7 +131,7 @@ const AllCocktails = () => {
 
             <form onSubmit={handleSubmit}>
               <label htmlFor="drink">
-                <h4>Cerca il tuo drink</h4>
+                Cerca il tuo drink
               </label>
               <div className="input-search">
                 <div class="input-group">
@@ -153,8 +154,6 @@ const AllCocktails = () => {
 
       <div className="col-sm-9 p-3 content-products">
         <div className="container">
-          
-
           <div className="row">
             <div className="col">
               {displayGrid ? (
@@ -164,52 +163,54 @@ const AllCocktails = () => {
                   <ErrorMessage>Nessun Cocktail Trovato</ErrorMessage>
                 ) : data && data && data.length > 0 ? (
                   <div>
-<div className="d-flex justify-content-between align-items-center">
-            <p className="mt-5">Prodotti disponibili: {count}</p>
+                    <div className="d-flex justify-content-between align-items-center">
+                      <p className="mt-5">Prodotti disponibili: {count}</p>
 
-            <div className="d-flex flex-inline">
-              <div className={style.switch}>
-                <BsFillGrid3X3GapFill
-                  className={clsx("option", {
-                    active: displayGrid,
-                  })}
-                  onClick={() => setDisplayGrid(true)}
-                />
+                      <div className="d-flex flex-inline">
+                        <div className={style.switch}>
+                          <BsFillGrid3X3GapFill
+                            className={clsx("option", {
+                              active: displayGrid,
+                            })}
+                            onClick={() => setDisplayGrid(true)}
+                          />
 
-                <BsViewStacked
-                  className={clsx("option", {
-                    active: !displayGrid,
-                  })}
-                  onClick={() => setDisplayGrid(false)}
-                />
-              </div>
-            </div>
-          </div>                    <Cocktails data={data} />
+                          <BsViewStacked
+                            className={clsx("option", {
+                              active: !displayGrid,
+                            })}
+                            onClick={() => setDisplayGrid(false)}
+                          />
+                        </div>
+                      </div>
+                    </div>{" "}
+                    <Cocktails data={data} />
                   </div>
                 ) : null
               ) : (
                 <div>
-<div className="d-flex justify-content-between align-items-center">
-            <p className="mt-5">Prodotti disponibili: {count}</p>
+                  <div className="d-flex justify-content-between align-items-center">
+                    <p className="mt-5">Prodotti disponibili: {count}</p>
 
-            <div className="d-flex flex-inline">
-              <div className={style.switch}>
-                <BsFillGrid3X3GapFill
-                  className={clsx("option", {
-                    active: displayGrid,
-                  })}
-                  onClick={() => setDisplayGrid(true)}
-                />
+                    <div className="d-flex flex-inline">
+                      <div className={style.switch}>
+                        <BsFillGrid3X3GapFill
+                          className={clsx("option", {
+                            active: displayGrid,
+                          })}
+                          onClick={() => setDisplayGrid(true)}
+                        />
 
-                <BsViewStacked
-                  className={clsx("option", {
-                    active: !displayGrid,
-                  })}
-                  onClick={() => setDisplayGrid(false)}
-                />
-              </div>
-            </div>
-          </div>                  <CocktailsList data={data} />
+                        <BsViewStacked
+                          className={clsx("option", {
+                            active: !displayGrid,
+                          })}
+                          onClick={() => setDisplayGrid(false)}
+                        />
+                      </div>
+                    </div>
+                  </div>{" "}
+                  <CocktailsList data={data} />
                 </div>
               )}
             </div>

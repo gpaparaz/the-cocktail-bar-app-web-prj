@@ -16,7 +16,7 @@
 }
 
 .active {
-  color: var(--bs-secondary-color);
+  color: var(--bs-hover-color);
 }
 
 .cocktailsContent {

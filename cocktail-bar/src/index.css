@@ -1,5 +1,6 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Courgette&family=DM+Serif+Display:ital@0;1&family=Noto+Sans+JP:wght@300;400;500;600;700;800&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Courgette&family=DM+Serif+Display:ital@0;1&family=Lato:wght@300;400;700&family=Noto+Sans+JP:wght@300;400;500;600;700;800&display=swap');
 
 :root {
   /* Colors */
@@ -9,7 +10,6 @@
   --soft-dark: #272724;
   --bs-primary: #417600;
   --bs-hover-color: #528e08;
-  --bs-secondary-color: #D3DC82;
   /*Scala di Grigi*/
   --extra-light-gray: #f8f9faff;
   --soft-light-gray: #f2f2f3;
@@ -108,6 +108,7 @@ h2,
 h3,
 h4 {
   letter-spacing: var(--letter-spacing);
+  font-family: 'DM Serif Display', serif;
 }
 h1 {
   font-size: 3rem;
@@ -121,10 +122,12 @@ h3 {
 h4 {
   font-size: 0.875rem;
 }
+
 p {
   color: var(--primary-gray);
   font-size: 0.9rem;
   letter-spacing: var(--letter-spacing);
+  font-family:'Noto Sans JP', sans-serif;
 }
 @media screen and (min-width: 753px) {
   h1 {
@@ -168,11 +171,11 @@ p {
 
 select option:checked {
   color: var(--dark-text-color) !important;
-  background: var(--bs-secondary-color) !important;
+  background: var(--bs-hover-color) !important;
 }
 
 select option:hover {
   color: var(--dark-text-color) !important;
-  background: var(--bs-secondary-color) !important;
+  background: var(--bs-hover-color) !important;
 }
 
