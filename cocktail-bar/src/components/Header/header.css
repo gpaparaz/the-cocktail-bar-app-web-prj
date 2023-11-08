@@ -138,7 +138,8 @@
       -moz-justify-content: space-between;
       -webkit-justify-content: space-between;
       -ms-justify-content: space-between;
-      justify-content: space-between;
+      justify-content: left;
+      margin-bottom: 0px;
     }
 
     .nav-link {
@@ -148,11 +149,7 @@
     .nav-link:hover {
       color: var(--bs-hover-color);
     }
-  
-    .nav-icon {
-      font-size: 1.4em;
-    }
-  
+
     .socialTop {
       display: grid;
       display: -moz-grid;
@@ -162,6 +159,7 @@
       grid-template-columns: auto auto auto;
       gap: 1rem;
       font-size: 1.2rem;
+      margin-bottom: 0px;
     }
   }
 

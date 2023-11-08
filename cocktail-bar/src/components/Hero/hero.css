@@ -69,11 +69,7 @@
   .home-hero-title h2 {
     font-weight: 900;
   }
-  
-  .home-hero-title h4 {
-    font-variant: small-caps;
-  }
-  
+ 
   .home-hero-text p {
     align-self: center;
     color: var(--light-gray);

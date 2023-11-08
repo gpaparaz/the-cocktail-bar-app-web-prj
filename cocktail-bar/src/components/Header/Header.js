@@ -32,7 +32,7 @@ const Header = () => {
       <div className="container nav-container">
         <header className="nav-header">
           <Link to="/" className="nav-brand">
-            <h3>Cocktail Bar</h3>
+            <h3>The Mixologist's Playground</h3>
           </Link>
           <div className="nav-toggler">
             <button className="icon-btn btn nav-toggler" onClick={openSidebar}>

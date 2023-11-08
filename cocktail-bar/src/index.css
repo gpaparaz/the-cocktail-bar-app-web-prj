@@ -1,6 +1,4 @@
-
-
-  @import url('https://fonts.googleapis.com/css2?family=Courgette&family=DM+Serif+Display:ital@0;1&family=Lato:wght@300;400;700&family=Noto+Sans+JP:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=DM+Serif+Display:ital@0;1&family=Lato:wght@300;400;700&family=Noto+Sans+JP:wght@300;400;500;600;700;800&display=swap');
 
 :root {
   /* Colors */
@@ -13,11 +11,11 @@
   /*Scala di Grigi*/
   --extra-light-gray: #f8f9faff;
   --soft-light-gray: #f2f2f3;
-  --light-gray: #ced4daff;
-  --primary-gray: #adb5bdff;
-  --soft-dark-gray: #89949e;
-  --dark-gray: #6c757dff;
-  --extra-dark-gray: #343a40ff;
+  --light-gray: rgb(207, 218, 206);
+  --primary-gray: rgb(173, 189, 173);
+  --soft-dark-gray: #899e8c;
+  --dark-gray: rgb(109, 125, 108);
+  --extra-dark-gray: rgb(63, 66, 61);
   /* Global */
   --letter-spacing: 0.08rem;
   --transition: all 0.2s ease;
@@ -121,7 +119,9 @@ h3 {
 }
 h4 {
   font-size: 0.875rem;
+  text-transform: none;
 }
+
 
 p {
   color: var(--primary-gray);

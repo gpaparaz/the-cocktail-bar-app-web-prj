@@ -1,6 +1,13 @@
 import React from "react";
 import style from "./cocktailsList.css";
+import { useNavigate } from "react-router-dom";
 const CocktailsList = ({ data }) => {
+  const navigate = useNavigate();
+
+  const goToCocktail = (_id) => {
+    navigate(`/cocktail/${_id}`);
+  };
+
   return (
     <div className="cocktails-list">
       {data.map((el) => {
@@ -19,7 +26,7 @@ const CocktailsList = ({ data }) => {
               <div className="px-4">
 
                 <h3>{el.strDrink}</h3>
-                <button className="btn btn-outline-primary">Scopri di più</button>
+                <button className="btn btn-outline-primary" onClick={() => goToCocktail(el.idDrink)}>Scopri di più</button>
               </div>
             </div>
           </>
