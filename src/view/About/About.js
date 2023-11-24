@@ -12,15 +12,9 @@ const About = () => {
         <div className="home-hero">
           <div className="home-hero-text">
             <div className="home-hero-title">
-              <h2 className="brand-color"> Lorem ipsum</h2>
-              <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
+              <h3>In un connubio unico di creatività e passione, nasce The Mixologist's Playground, <br/> un'oasi moderna dove l'arte dei cocktail si fonde con l'atmosfera rilassata di un playground urbano.</h3>
             </div>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat
-            </p>
+
           </div>
         </div>
       </Hero>
