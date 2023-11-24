@@ -3,7 +3,6 @@ import style from "./singleCocktailPage.css";
 import Loading from "../../components/Loading/Loading";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import { BsArrowLeftShort } from "react-icons/bs";
-import { IoArrowBackCircleSharp } from "react-icons/io5";
 import { useParams, Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";

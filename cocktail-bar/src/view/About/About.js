@@ -2,13 +2,9 @@ import React from "react";
 import heroAbout from "../../assets/image/hero-about-2.png";
 import Hero from "../../components/Hero/Hero";
 import info from '../../utils/info.json'
-import user from "../../assets/image/user.png";
-import { BsFillStarFill } from "react-icons/bs";
-import Reviews from "../../components/Reviews/Reviews";
 import ReviewsPage from "../../components/ReviewsPage/ReviewsPage";
 
 const About = () => {
-  const reviews = info.reviews;
   
   return (
     <section>

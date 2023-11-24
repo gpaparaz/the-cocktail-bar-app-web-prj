@@ -1,5 +1,4 @@
 import React from "react";
-import { AiFillHome } from "react-icons/ai";
 import {
   FaFacebookSquare,
   FaInstagramSquare

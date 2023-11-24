@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useGlobalContext } from "../../context";
 import style from "./allcocktails.css";
 import clsx from "clsx";

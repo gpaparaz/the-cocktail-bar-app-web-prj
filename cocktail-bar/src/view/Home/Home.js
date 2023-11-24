@@ -1,5 +1,4 @@
 import React from "react";
-import { useGlobalContext } from "../../context";
 import Hero from "../../components/Hero/Hero";
 import { Link } from "react-router-dom";
 import useMultipleFetch from "../../useMultipleFetch";
