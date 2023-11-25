@@ -29,9 +29,6 @@ display: flex !important;
     width: 20px;
     height: 20px;
 }
-.swiper-vertical > .swiper-pagination-bullets, .swiper-pagination-vertical.swiper-pagination-bullets {
-    /* right: 2em !important; */
-}
 
 .swiper-vertical > .swiper-pagination-bullets, .swiper-pagination-vertical.swiper-pagination-bullets {
     right: unset !important;

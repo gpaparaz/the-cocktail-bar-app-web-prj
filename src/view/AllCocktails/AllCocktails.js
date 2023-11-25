@@ -79,7 +79,7 @@ const AllCocktails = () => {
   };
 
   return (
-    <section className="cocktailsContent">
+    <section className="cocktailsContent mb-5">
       <div className=" container-sm">
         
         

@@ -27,7 +27,7 @@ const Home = () => {
               <h4>Dove cocktail e delizie culinarie danzano insieme in perfetta armonia</h4>
             </div>
             <p>
-            Soddisfa le tue papille gustative ed esplora le nostre straordinarie creazioni di drink. Saluti per stuzzicare i tuoi sensi
+            Soddisfa le tue papille gustative ed esplora le nostre straordinarie creazioni di drink e non solo
             </p>
             <Link to="/" className="btn btn-primary">
               Scopri di più
