@@ -79,18 +79,18 @@ const AllCocktails = () => {
   };
 
   return (
-    <section className="d-flex cocktailsContent">
-      <div className="col-3 p-3 mb-2 filters">
-        <h4>Filtri</h4>
+    <section className="cocktailsContent">
+      <div className=" container-sm">
+        
         <button className="btn btn-outline-secondary" onClick={resetFilters}>
           Reset filtri{" "}
         </button>
-        <br />
+      <div className="filters d-flex align-items-center">
         {isLoadingGlass || isLoadingCategory ? (
           <Loading />
         ) : (
           <>
-            <Form className="my-3">
+            <Form>
               <label>Tipo di bicchiere</label>
               <Form.Select
                 className="form-control"
@@ -109,7 +109,7 @@ const AllCocktails = () => {
                 ))}
               </Form.Select>
             </Form>
-            <Form className="my-3">
+            <Form className="mx-3">
               <label>Categoria drink </label>
               <Form.Select
                 className="form-control"
@@ -150,9 +150,10 @@ const AllCocktails = () => {
             </form>
           </>
         )}
+        </div>
       </div>
 
-      <div className="col-sm-9 p-3 content-products">
+      <div className="p-3 content-products">
         <div className="container">
           <div className="row">
             <div className="col">
