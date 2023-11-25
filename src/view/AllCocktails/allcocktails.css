@@ -33,3 +33,7 @@
   border: none;
   color: var(--dark-text-color);
 }
+
+.resetFilters {
+  height: 40px;
+}

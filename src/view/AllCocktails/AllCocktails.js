@@ -82,10 +82,8 @@ const AllCocktails = () => {
     <section className="cocktailsContent">
       <div className=" container-sm">
         
-        <button className="btn btn-outline-secondary" onClick={resetFilters}>
-          Reset filtri{" "}
-        </button>
-      <div className="filters d-flex align-items-center">
+        
+        <div className=" d-flex align-items-end">
         {isLoadingGlass || isLoadingCategory ? (
           <Loading />
         ) : (
@@ -150,6 +148,9 @@ const AllCocktails = () => {
             </form>
           </>
         )}
+        <button className="btn btn-outline-secondary resetFilters mx-3" onClick={resetFilters}>
+          Reset filtri{" "}
+        </button>
         </div>
       </div>
 
