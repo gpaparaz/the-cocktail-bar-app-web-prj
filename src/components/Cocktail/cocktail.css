@@ -44,10 +44,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 5px;
 }
 
 .single-cocktail:hover .card-text {
-  /* display: block; */
   opacity: 1;
   visibility: visible;
 }

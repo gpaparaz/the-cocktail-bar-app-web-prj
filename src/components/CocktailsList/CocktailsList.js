@@ -26,7 +26,7 @@ const CocktailsList = ({ data }) => {
               <div className="px-4">
 
                 <h3>{el.strDrink}</h3>
-                <button className="btn btn-outline-primary" onClick={() => goToCocktail(el.idDrink)}>Scopri di più</button>
+                <button className="btn btn-outline-primary mt-2" onClick={() => goToCocktail(el.idDrink)}>Scopri di più</button>
               </div>
             </div>
           </>
