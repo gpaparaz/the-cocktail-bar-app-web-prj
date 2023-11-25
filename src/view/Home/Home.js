@@ -20,9 +20,9 @@ const Home = () => {
   return (
     <section className="mb-5">
       <Hero img = {heroHome} disableOverlay = {true}>
-        <div className="home-hero">
-          <div className="home-hero-text">
-            <div className="home-hero-title">
+        <div className="hero">
+          <div className="hero-text">
+            <div className="hero-title">
               <h2 className="brand-color">The Mixologist's Playground</h2>
               <h4>Dove cocktail e delizie culinarie danzano insieme in perfetta armonia</h4>
             </div>

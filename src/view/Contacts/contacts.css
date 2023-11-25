@@ -1,0 +1,9 @@
+.maps {
+    width: 25em;
+    height: 25em;
+    border-radius: 5px;
+}
+
+.openingTime {
+    gap: none;
+}

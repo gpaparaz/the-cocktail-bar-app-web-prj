@@ -44,8 +44,8 @@ const ReviewsPage = ({ reviewsPerPage }) => {
                   <button
                     className={
                       currentPage === index + 1
-                        ? "btn btn-primary currentPage"
-                        : "btn btn-primary"
+                        ? "btn btn-primary mx-1 currentPage"
+                        : "btn btn-primary mx-1"
                     }
                   >
                     {index + 1}

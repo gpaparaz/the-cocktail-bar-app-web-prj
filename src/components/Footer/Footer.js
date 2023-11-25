@@ -18,7 +18,7 @@ const Footer = () => {
           </div>
           <div class="col-sm-3">
             <h5 class="fw-semibold">Indirizzo</h5>
-            <p>Via Mazzini 23</p>
+            <p>Via Guglielmo Oberdan, 2</p>
             <p>35010, Padova (PD)</p>
           </div>
           <div class="col-sm-3">
