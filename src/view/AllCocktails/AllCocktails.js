@@ -81,76 +81,75 @@ const AllCocktails = () => {
   return (
     <section className="cocktailsContent mb-5">
       <div className=" container-sm">
-        
-        
         <div className=" d-flex align-items-end">
-        {isLoadingGlass || isLoadingCategory ? (
-          <Loading />
-        ) : (
-          <>
-            <Form>
-              <label>Tipo di bicchiere</label>
-              <Form.Select
-                className="form-control"
-                aria-label="Select glass"
-                onChange={(e) => {
-                  handleToggle(e.target.value !== "");
-                  handleSelectedGlass(e);
-                }}
-                value={selectedGlass}
-              >
-                <option value="">Tutti</option>
-                {glass.map((glass, index) => (
-                  <option key={index} value={glass.strGlass}>
-                    {glass.strGlass}
-                  </option>
-                ))}
-              </Form.Select>
-            </Form>
-            <Form className="mx-3">
-              <label>Categoria drink </label>
-              <Form.Select
-                className="form-control"
-                aria-label="Select category"
-                onChange={(e) => {
-                  handleToggle(e.target.value !== "");
-                  handleSelectedCategory(e);
-                }}
-                value={selectedCategory}
-              >
-                <option value="">Tutti</option>
-                {category.map((category, index) => (
-                  <option key={index} value={category.strCategory}>
-                    {category.strCategory}
-                  </option>
-                ))}
-              </Form.Select>
-            </Form>
+          {isLoadingGlass || isLoadingCategory ? (
+            <Loading />
+          ) : (
+            <>
+              <Form>
+                <label>Tipo di bicchiere</label>
+                <Form.Select
+                  className="form-control"
+                  aria-label="Select glass"
+                  onChange={(e) => {
+                    handleToggle(e.target.value !== "");
+                    handleSelectedGlass(e);
+                  }}
+                  value={selectedGlass}
+                >
+                  <option value="">Tutti</option>
+                  {glass.map((glass, index) => (
+                    <option key={index} value={glass.strGlass}>
+                      {glass.strGlass}
+                    </option>
+                  ))}
+                </Form.Select>
+              </Form>
+              <Form className="mx-3">
+                <label>Categoria drink </label>
+                <Form.Select
+                  className="form-control"
+                  aria-label="Select category"
+                  onChange={(e) => {
+                    handleToggle(e.target.value !== "");
+                    handleSelectedCategory(e);
+                  }}
+                  value={selectedCategory}
+                >
+                  <option value="">Tutti</option>
+                  {category.map((category, index) => (
+                    <option key={index} value={category.strCategory}>
+                      {category.strCategory}
+                    </option>
+                  ))}
+                </Form.Select>
+              </Form>
 
-            <form onSubmit={handleSubmit}>
-              <label htmlFor="drink">
-                Cerca il tuo drink
-              </label>
-              <div className="input-search">
-                <div class="input-group">
-                  <input
-                    id="drink"
-                    className="input form-control"
-                    placeholder="Cerca per nome"
-                    value={input}
-                    onChange={(e) => setInput(e.target.value)}
-                  />
-                  <span class="input-group-text icon-search">
-                    <FaSearch className="icon" />
-                  </span>
+              <form onSubmit={handleSubmit}>
+                <label htmlFor="drink">Cerca il tuo drink</label>
+                <div className="input-search">
+                  <div class="input-group">
+                    <input
+                      id="drink"
+                      className="input form-control"
+                      placeholder="Cerca per nome"
+                      value={input}
+                      onChange={(e) => setInput(e.target.value)}
+                    />
+                    <button class="input-group-text icon-search" type="submit">
+                      <FaSearch className="icon" />
+                    </button>
+                  </div>
                 </div>
-              </div>
-            </form>
-          </>
-        )}
-        <button className="btn btn-outline-secondary resetFilters mx-3" onClick={resetFilters}>
-          Reset filtri{" "}
-        </button>
+              </form>
+            </>
+          )}
+          <button
+            className="btn btn-outline-secondary resetFilters mx-3"
+            onClick={resetFilters}
+          >
+            Reset filtri{" "}
+          </button>
         </div>
       </div>
 
