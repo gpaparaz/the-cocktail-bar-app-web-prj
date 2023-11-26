@@ -1,48 +1,53 @@
-
-.swiper-vertical > .swiper-wrapper {
-    height:100vh;
-}
-
-.swiper-slide {
-background: rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(4.9px);
--webkit-backdrop-filter: blur(4.9px);
-display: flex !important;
-}
-
 .cocktail-hero {
     width: 60%;
     display: flex;
     align-items: center;
-    padding-left: 10em;
+
 }
 
-.cocktail-datails {
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 10em;
-}
-
-.swiper-pagination-clickable .swiper-pagination-bullet {
-    width: 20px;
-    height: 20px;
-}
-
-.swiper-vertical > .swiper-pagination-bullets, .swiper-pagination-vertical.swiper-pagination-bullets {
-    right: unset !important;
-    left: 2em !important;
-}
-
-
-.swiper-vertical > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-vertical.swiper-pagination-bullets .swiper-pagination-bullet {
-    background-color: var(--bs-primary);
-}
 .cocktailName {
     font-family: 'Courgette', cursive;
 }
 
 .cocktail-type {
     font-family: 'Noto Sans JP', sans-serif;
+}
+
+.cocktailDetails {
+    min-height: 100vh;
+    background-color: var(--bs-primary);
+}
+
+.instructions{
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    padding-right: 0.5em;
+}
+
+
+.divider
+{
+	position: relative;
+	margin-top: 90px;
+	height: 1px;
+}
+
+.div-transparent:before
+{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 5%;
+	right: 5%;
+	width: 90%;
+	height: 1px;
+	background-image: linear-gradient(to right, transparent, var(--text-color), transparent);
+}
+
+.instructionsBg {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url('../../assets//image/single-cocktail.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
