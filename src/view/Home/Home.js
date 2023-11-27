@@ -9,6 +9,7 @@ import style from "./home.css";
 import info from '../../utils/info.json'
 import Reviews from "../../components/Reviews/Reviews";
 import heroHome from '../../assets/image/hero-home.jpg'
+import  ScrollToTopOnMount  from '../../utils/ScrollToTop' 
 
 const Home = () => {
   const numberOfRequests = 8;
@@ -19,6 +20,7 @@ const Home = () => {
 
   return (
     <section className="mb-5">
+      <ScrollToTopOnMount />
       <Hero img = {heroHome} disableOverlay = {true}>
         <div className="hero">
           <div className="hero-text">

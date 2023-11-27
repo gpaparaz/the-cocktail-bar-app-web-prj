@@ -10,6 +10,7 @@ import useGetListOfFilters from "../../useGetListOfFilters";
 import { FaSearch } from "react-icons/fa";
 import { BsFillGrid3X3GapFill, BsViewStacked } from "react-icons/bs";
 import CocktailsList from "../../components/CocktailsList/CocktailsList";
+import  ScrollToTopOnMount  from '../../utils/ScrollToTop'
 
 const AllCocktails = () => {
   const { data, isLoading, isError, count, searchCocktail } =
@@ -80,6 +81,7 @@ const AllCocktails = () => {
 
   return (
     <section className="cocktailsContent mb-5">
+      <ScrollToTopOnMount />
       <div className=" container-sm">
         <div className=" d-flex align-items-end">
           {isLoadingGlass || isLoadingCategory ? (

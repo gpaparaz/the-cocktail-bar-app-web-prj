@@ -4,12 +4,9 @@ import Loading from "../../components/Loading/Loading";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import { BsArrowLeftShort } from "react-icons/bs";
 import { useParams, Link } from "react-router-dom";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/pagination";
 import Cocktails from "../../components/Cocktails/Cocktails";
 import useFetchByIdAndIngredient from "../../useFetchByIdAndIngredient";
+import  ScrollToTopOnMount  from '../../utils/ScrollToTop'
 
 const SingleCocktailPage = () => {
   const { id } = useParams();
@@ -73,6 +70,7 @@ const SingleCocktailPage = () => {
 
   return (
     <>
+    <ScrollToTopOnMount />
     <div className="d-flex">
       <div className="col-6 d-flex justify-content-center">
       <div className="cocktail-hero">

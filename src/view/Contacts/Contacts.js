@@ -3,10 +3,12 @@ import style from './contacts.css'
 import Hero from '../../components/Hero/Hero'
 import contactsHero from '../../assets/image/contacts-hero.jpg'
 import maps from '../../assets/image/maps.jpg'
+import  ScrollToTopOnMount  from '../../utils/ScrollToTop'
 
 const Contacts = () => {
   return (
     <section>
+      <ScrollToTopOnMount />
       <Hero img = {contactsHero}>
         <div className="hero d-flex">
           <div className="hero-text">
