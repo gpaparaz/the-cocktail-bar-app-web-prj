@@ -6,6 +6,13 @@
   gap: 2rem;
 }
 
+.cocktail-card-fullWidth {
+  min-height: 20vh;
+  place-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 @media screen and (min-width: 753px) {
   .cocktails-card {
     grid-template-columns: 1fr 1fr;

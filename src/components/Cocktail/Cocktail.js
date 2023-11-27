@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { HiClipboardList } from "react-icons/hi";
-import { useGlobalContext } from "../../context";
 import style from "./cocktail.css";
-
-const Cocktail = ({ strDrinkThumb: img, idDrink: _id, strDrink: name }) => {
+import clsx from "clsx";
+const Cocktail = ({ strDrinkThumb: img, idDrink: _id, strDrink: name, isFullWidth }) => {
   const navigate = useNavigate();
 
   const goToCocktail = (_id) => {
@@ -12,9 +10,11 @@ const Cocktail = ({ strDrinkThumb: img, idDrink: _id, strDrink: name }) => {
   };
 
   return (
-    <div className="single-cocktail">
-      <div
-        className='img'
+    <div 
+    className={clsx({"single-cocktail": !isFullWidth, "single-cocktail-fullWidth" : isFullWidth})}
+    >
+      <div 
+      className={clsx({"img rounded": !isFullWidth, "img" : isFullWidth})}
         style={{
           backgroundImage: `url(${img})`,
           backgroundPosition: "center",
@@ -22,7 +22,9 @@ const Cocktail = ({ strDrinkThumb: img, idDrink: _id, strDrink: name }) => {
           backgroundRepeat: "no-repeat",
         }}
       />
-      <div className="card-text container" onClick={() => goToCocktail(_id)}
+      <div 
+      className={clsx({"card-text container rounded": !isFullWidth, "card-text container" : isFullWidth})}
+      onClick={() => goToCocktail(_id)}
       >
         <h5 className="fw-bold">{name}</h5>
         

@@ -1,13 +1,15 @@
 import React from "react";
 import Coktail from "../Cocktail/Cocktail";
 import style from "./cocktails.css";
+import clsx from "clsx";
 
-const Cocktails = ({ data}) => {
+const Cocktails = ({data, isFullWidth}) => {
+
   return (
     <>
-      <div className="cocktails-card">
+      <div className={clsx({"cocktails-card": !isFullWidth, "cocktail-card-fullWidth" : isFullWidth})}>
         {data.map((el) => {
-          return <Coktail key={el.idDrink} {...el} />;
+          return <Coktail key={el.idDrink} {...el} isFullWidth={isFullWidth} />;
         })}
       </div>
     </>

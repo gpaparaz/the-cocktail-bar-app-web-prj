@@ -26,7 +26,7 @@ const Home = () => {
           <div className="hero-text">
             <div className="hero-title">
               <h2 className="brand-color">The Mixologist's Playground</h2>
-              <h4>Dove cocktail e delizie culinarie danzano insieme in perfetta armonia</h4>
+              <h4>Dove cocktails e delizie culinarie danzano insieme in perfetta armonia</h4>
             </div>
             <p>
             Soddisfa le tue papille gustative ed esplora le nostre straordinarie creazioni di drink e non solo
@@ -37,21 +37,23 @@ const Home = () => {
           </div>
         </div>
       </Hero>
+<div className="container-sm">
 
-      <div className="container-sm px-5">
+        <h2 className="my-5">I drink del momento</h2>
+</div>
+      <div className="container-fluid">
         {isLoading ? (
           <Loading />
         ) : isError ? (
           <ErrorMessage>Nessun Cocktail Trovato</ErrorMessage>
         ) : data && data.length > 0 ? (
           <>
-          <h2 className="mt-5">I drink del momento</h2>
-          <Cocktails data={data} />
+          <Cocktails data={data} isFullWidth={true}/>
           </>
         ) : null}
       </div>
 
-      <div className="container-sm">
+      <div className="container-sm px-5">
         <h2 className="mt-5 mb-3">Ultime recensioni</h2>
         <Link to="/about#reviews">Vai alla sezione delle recensioni</Link>
         <div className="d-flex flex-wrap justify-content-center mt-5">
