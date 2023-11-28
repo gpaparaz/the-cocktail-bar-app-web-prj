@@ -11,12 +11,12 @@ const Sidebar = () => {
     <aside className={`${isSidebarOpen ? "sidebar show-sidebar" : "sidebar"}`}>
       <div className="sidebar-content">
         <header className="nav-header container">
-          <div className="nav-brand">
+          {/* <div className="nav-brand">
             <h3>DRINK TEAM</h3>
           </div>
           <button className="nav-toggler btn icon-btn" onClick={closeSidebar}>
             <VscArrowSmallLeft className="nav-icon" />
-          </button>
+          </button> */}
         </header>
         <div className="container">
           <LinkComponent classLink="sidebar-links" />

@@ -6,7 +6,7 @@
     right: 0;
     z-index: 2;
     width: 100%;
-    background: pink;
+    background: var(--dark-bg);
     transform: translateX(-100%);
     transition: var(--transition);
   }

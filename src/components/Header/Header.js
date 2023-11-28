@@ -7,7 +7,7 @@ import style from './header.css'
 
 const Header = () => {
 
-  const { openSidebar } = useGlobalContext();
+  const { closeSidebar, isSidebarOpen, openSidebar } = useGlobalContext();
 
   useEffect(() => {
     // Funzione che gestisce lo scroll
@@ -35,7 +35,7 @@ const Header = () => {
             <h3>The Mixologist's Playground</h3>
           </Link>
           <div className="nav-toggler">
-            <button className="icon-btn btn nav-toggler" onClick={openSidebar}>
+            <button className="icon-btn btn nav-toggler" onClick={ isSidebarOpen ? closeSidebar : openSidebar}>
               <FaBars className="nav-icon" />
             </button>
           </div>
