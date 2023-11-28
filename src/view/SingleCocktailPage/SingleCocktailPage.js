@@ -42,7 +42,6 @@ const SingleCocktailPage = () => {
     strIngredient4,
     strIngredient5,
     strInstructions,
-    strInstructionsIT,
     strMeasure1,
     strMeasure2,
     strMeasure3,
@@ -89,10 +88,10 @@ const SingleCocktailPage = () => {
     </div>
     <div className="d-flex">
     <div className="col-6 d-flex align-items-center justify-content-end instructionsBg">
-              <h1 className="instructions">Istruzioni</h1>
+              <h1 className="instructions">Instructions</h1>
       </div>
       <div className="col-6 cocktailDetails p-5">
-      <h3 className="mb-3">Ingredienti:</h3>
+      <h3 className="mb-3">Ingredients:</h3>
             <ul className="instruction-list">
               {strInstructionsList.map((el, index) => {
                 if (el.istruzione) {
@@ -109,9 +108,9 @@ const SingleCocktailPage = () => {
 
             <div class="divider div-transparent"></div>
 
-            <h3 className="mb-3 mt-5">Istruzioni:</h3>
+            <h3 className="mb-3 mt-5">Instructions:</h3>
             <h5 className="info">
-              {strInstructionsIT ? strInstructionsIT : strInstructions}
+              { strInstructions}
             </h5>
       </div>
       
