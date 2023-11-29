@@ -12,7 +12,7 @@
     }
 
     .cocktailDetails {
-        height: 50vh !important;
+        min-height: 50vh !important;
     }
   }
 
@@ -25,7 +25,7 @@
 }
 
 .cocktailDetails {
-    height: 100vh;
+    min-height: 100vh;
     background-color: var(--bs-primary);
 }
 

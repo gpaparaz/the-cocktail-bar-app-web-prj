@@ -3,7 +3,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 400px;
-    width: 300px;
+    width: 15em;
 }
 
 .containerImg {
@@ -14,8 +14,10 @@
 
 @media (max-width: 992px){
     .containerImg {
-      height: 60vh;
+      height: 100vh;
     }
+
+
   }
 
 .img1 {

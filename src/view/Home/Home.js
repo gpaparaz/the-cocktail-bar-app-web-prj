@@ -41,7 +41,7 @@ const Home = () => {
 
       <div className="container my-5">
         <div className="row">
-          <div className="col-lg-6 col-12 containerImg">
+          <div className="col-lg-6 col-12 justify-content-center containerImg">
             <div className="historyImg img1"></div>
             <div className="historyImg img2"></div>
             <div className="historyImg img3"></div>
