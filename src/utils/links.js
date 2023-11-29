@@ -4,6 +4,7 @@ import {
   FaInstagramSquare
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { useGlobalContext } from "../context";
 
 const links = [
   {
@@ -26,11 +27,18 @@ const links = [
 ];
 
 const LinkComponent = ({ classLink }) => {
+  const { closeSidebar, isSidebarOpen } = useGlobalContext();
   return (
     <ul className={classLink}>
       {links.map((link) => {
         return (
-          <Link key={link.text} to={link.url} className="nav-item">
+          <Link key={link.text} to={link.url} 
+          onClick={() => {
+            if (isSidebarOpen) {
+              closeSidebar();
+            }
+          }}
+          className="nav-item" >
             <div className="nav-link">
               <h5 className="nav-text">{link.text}</h5>
             </div>
