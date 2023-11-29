@@ -13,6 +13,7 @@
   flex-wrap: wrap;
 }
 
+
 @media screen and (min-width: 753px) {
   .cocktails-card {
     grid-template-columns: 1fr 1fr;

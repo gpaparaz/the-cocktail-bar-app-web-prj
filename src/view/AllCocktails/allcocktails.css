@@ -1,3 +1,28 @@
+.filtersContainer {
+  align-items: end;
+}
+
+.filtersContainer form {
+ margin-right: 2em;
+}
+
+
+@media (max-width: 992px){
+.filtersContainer {
+  flex-direction: column;
+  align-items: start;
+}
+
+.filtersContainer form {
+  margin-top: 1em;
+ }
+
+ .filtersContainer button {
+  margin-top: 1em;
+ }
+
+}
+
 .switch {
   display: inline-flex;
   margin: 30px 0 50px;

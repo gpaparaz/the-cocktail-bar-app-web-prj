@@ -11,6 +11,11 @@
   
   .cardWidth {
     width: 30%;
-
   }
-  
+
+  @media (max-width: 992px){
+    .cardWidth {
+      width: 100%;
+      margin-bottom: 2em;
+    }
+  }

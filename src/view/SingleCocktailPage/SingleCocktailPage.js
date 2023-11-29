@@ -70,8 +70,9 @@ const SingleCocktailPage = () => {
   return (
     <>
     <ScrollToTopOnMount />
-    <div className="d-flex">
-      <div className="col-6 d-flex justify-content-center">
+    <div className="container-fluid">
+      <div className="row">
+      <div className="col-lg-6 col-12 d-flex justify-content-center">
       <div className="cocktail-hero">
               <div className="spacer">
                 <h1 className="cocktailName mb-3">{name}</h1>
@@ -83,14 +84,16 @@ const SingleCocktailPage = () => {
               </div>
             </div>
       </div>
-      <div className="col-6 " style={style}>
+      <div className="col-lg-6 col-12 " style={style}>
+      </div>
       </div>
     </div>
-    <div className="d-flex">
-    <div className="col-6 d-flex align-items-center justify-content-end instructionsBg">
+    <div className="container-fluid">
+      <div className="row">
+    <div className="d-none d-lg-block col-lg-6 col-12 d-flex align-items-center justify-content-end instructionsBg">
               <h1 className="instructions">Instructions</h1>
       </div>
-      <div className="col-6 cocktailDetails p-5">
+      <div className="col-lg-6 col-12 cocktailDetails p-5">
       <h3 className="mb-3">Ingredients:</h3>
             <ul className="instruction-list">
               {strInstructionsList.map((el, index) => {
@@ -113,7 +116,7 @@ const SingleCocktailPage = () => {
               { strInstructions}
             </h5>
       </div>
-      
+      </div>
 
     </div>
 

@@ -83,7 +83,7 @@ const AllCocktails = () => {
     <section className="cocktailsContent mb-5">
       <ScrollToTopOnMount />
       <div className=" container-sm">
-        <div className=" d-flex align-items-end">
+        <div className="d-lg-flex d-block filtersContainer">
           {isLoadingGlass || isLoadingCategory ? (
             <Loading />
           ) : (
@@ -107,7 +107,7 @@ const AllCocktails = () => {
                   ))}
                 </Form.Select>
               </Form>
-              <Form className="mx-3">
+              <Form>
                 <label>Categoria drink </label>
                 <Form.Select
                   className="form-control"
@@ -147,7 +147,7 @@ const AllCocktails = () => {
             </>
           )}
           <button
-            className="btn btn-outline-secondary resetFilters mx-3"
+            className="btn btn-outline-secondary resetFilters"
             onClick={resetFilters}
           >
             Reset filtri{" "}

@@ -41,12 +41,12 @@ const Home = () => {
 
       <div className="container my-5">
         <div className="row">
-          <div className="col-6 containerImg">
+          <div className="col-lg-6 col-12 containerImg">
             <div className="historyImg img1"></div>
             <div className="historyImg img2"></div>
             <div className="historyImg img3"></div>
           </div>
-          <div className="col-6">
+          <div className="col-lg-6 col-12 ">
             <h3>La nostra storia</h3>
             <p>
               Da amanti dei cocktail con una visione audace, abbiamo creato

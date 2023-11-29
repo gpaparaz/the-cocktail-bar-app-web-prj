@@ -11,6 +11,13 @@
     height: 100vh;
 }
 
+
+@media (max-width: 992px){
+    .containerImg {
+      height: 60vh;
+    }
+  }
+
 .img1 {
     position: absolute;
     z-index: 1;
