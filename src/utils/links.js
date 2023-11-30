@@ -21,7 +21,7 @@ const links = [
   },
   {
     url:"/contacts",
-    text: "Contatti"
+    text: "Contacts"
   }
   
 ];

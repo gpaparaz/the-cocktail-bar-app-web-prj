@@ -18,7 +18,7 @@
   }
 
   .nav-scrolled {
-    background-color: black; /* Colore di sfondo desiderato */
+    background-color: var(--dark-bg); /* Colore di sfondo desiderato */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Esempio di ombra */
   }
   

@@ -6,7 +6,7 @@ import { BsArrowLeftShort } from "react-icons/bs";
 import { useParams, Link } from "react-router-dom";
 import Cocktails from "../../components/Cocktails/Cocktails";
 import useFetchByIdAndIngredient from "../../useFetchByIdAndIngredient";
-import  ScrollToTopOnMount  from '../../utils/ScrollToTop'
+import ScrollToTopOnMount from "../../utils/ScrollToTop";
 
 const SingleCocktailPage = () => {
   const { id } = useParams();
@@ -65,15 +65,13 @@ const SingleCocktailPage = () => {
     height: "100vh",
   };
 
-
-
   return (
     <>
-    <ScrollToTopOnMount />
-    <div className="container-fluid">
-      <div className="row">
-      <div className="col-lg-6 col-12 d-flex justify-content-center">
-      <div className="cocktail-hero">
+      <ScrollToTopOnMount />
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-lg-6 col-12 d-flex justify-content-center">
+            <div className="cocktail-hero">
               <div className="spacer">
                 <h1 className="cocktailName mb-3">{name}</h1>
                 <div className="cocktail-type">
@@ -83,18 +81,17 @@ const SingleCocktailPage = () => {
                 </div>
               </div>
             </div>
+          </div>
+          <div className="col-lg-6 col-12 " style={style}></div>
+        </div>
       </div>
-      <div className="col-lg-6 col-12 " style={style}>
-      </div>
-      </div>
-    </div>
-    <div className="container-fluid">
-      <div className="row">
-    <div className="d-none d-lg-block col-lg-6 col-12 d-flex align-items-center justify-content-end instructionsBg">
-              <h1 className="instructions">Instructions</h1>
-      </div>
-      <div className="col-lg-6 col-12 cocktailDetails p-5">
-      <h3 className="mb-3">Ingredients:</h3>
+      <div className="container-fluid">
+        <div className="row">
+          <div className="d-none d-lg-flex col-lg-6 col-12 align-items-center justify-content-end instructionsBg">
+            <h1 className="instructions">Instructions</h1>
+          </div>
+          <div className="col-lg-6 col-12 cocktailDetails p-5">
+            <h3 className="mb-3">Ingredients:</h3>
             <ul className="instruction-list">
               {strInstructionsList.map((el, index) => {
                 if (el.istruzione) {
@@ -112,16 +109,11 @@ const SingleCocktailPage = () => {
             <div class="divider div-transparent"></div>
 
             <h3 className="mb-3 mt-5">Instructions:</h3>
-            <h5 className="info">
-              { strInstructions}
-            </h5>
+            <h5 className="info">{strInstructions}</h5>
+          </div>
+        </div>
       </div>
-      </div>
 
-    </div>
-
-
-      
       <div className="my-5 container-sm">
         <h3>Altri drink simili</h3>
         <div className="container-sm px-5">

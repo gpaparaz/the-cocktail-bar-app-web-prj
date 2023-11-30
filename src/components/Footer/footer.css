@@ -1,5 +1,5 @@
 footer {
-    background-color: rgb(39, 39, 39);
+    background-color: rgb(24, 24, 24);
     color: var(--bs-text-color);
     padding-top: 30px;
   }
@@ -12,7 +12,7 @@ footer {
   }
   
   .footerBottom {
-    background-color:rgb(27, 27, 27);
+    background-color:rgb(20, 20, 20);
     padding: 10px 0px;
     color: var(--bs-text-color);
   }

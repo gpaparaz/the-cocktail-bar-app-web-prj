@@ -13,7 +13,7 @@ const Footer = () => {
             <Link to="/cocktails">Cocktails</Link> <br />
             <Link to="/about">About</Link>
             <br />
-            <Link to="/contacts">Contatti</Link>
+            <Link to="/contacts">Contacts</Link>
             <br />
           </div>
           <div class="col-sm-3">

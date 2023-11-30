@@ -3,19 +3,21 @@
 :root {
   /* Colors */
   --text-color: #EDEDDC;
-  --dark-text-color: #161616;
-  --dark-bg: #161616;
+  --dark-text-color: #131313;
+  --dark-bg: #131313;
   --soft-dark: #272724;
   --bs-primary: #417600;
   --bs-hover-color: #528e08;
+
   /*Scala di Grigi*/
   --extra-light-gray: #f8f9faff;
   --soft-light-gray: #f2f2f3;
   --light-gray: rgb(207, 218, 206);
-  --primary-gray: rgb(173, 189, 173);
-  --soft-dark-gray: #899e8c;
-  --dark-gray: rgb(109, 125, 108);
-  --extra-dark-gray: rgb(63, 66, 61);
+  --primary-gray: rgb(182, 193, 182);
+  --soft-dark-gray: #95a197;
+  --dark-gray: rgb(115, 122, 115);
+  --extra-dark-gray: #212621;
+
   /* Global */
   --letter-spacing: 0.08rem;
   --transition: all 0.2s ease;
@@ -26,7 +28,6 @@
   --btn-radius: 16px;
   --light-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   --dark-shadow: 4px 5px 15px rgba(5, 6, 6, 0.4);
-
 
 }
 

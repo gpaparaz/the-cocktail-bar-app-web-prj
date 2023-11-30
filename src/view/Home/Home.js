@@ -41,10 +41,12 @@ const Home = () => {
 
       <div className="container my-5">
         <div className="row">
-          <div className="col-lg-6 col-12 justify-content-center containerImg">
-            <div className="historyImg img1"></div>
-            <div className="historyImg img2"></div>
-            <div className="historyImg img3"></div>
+          <div className="col-lg-6 col-12 justify-content-center">
+            <div className="containerImg">
+              <div className="historyImg img1"></div>
+              <div className="historyImg img2"></div>
+              <div className="historyImg img3"></div>
+            </div>
           </div>
           <div className="col-lg-6 col-12 ">
             <h3>La nostra storia</h3>
@@ -58,9 +60,9 @@ const Home = () => {
             <h3 className="mt-3">La Nostra Filosofia</h3>
             <p>
               Qui, ogni cocktail è una storia raccontata attraverso sapori
-              audaci e combinazioni uniche. I nostri bartender sono veri artisti,
-              padroni nell'arte di creare bevande che stimolano i sensi e
-              scatenano emozioni.
+              audaci e combinazioni uniche. I nostri bartender sono veri
+              artisti, padroni nell'arte di creare bevande che stimolano i sensi
+              e scatenano emozioni.
             </p>
 
             <h3 className="mt-3">Cibo e Atmosfera</h3>
@@ -73,10 +75,11 @@ const Home = () => {
             </p>
             <h3 className="mt-3">Il Playground</h3>
             <p>
-              Il nostro ambiente è progettato per farvi sentire come se foste nel parco
-              giochi di un alchimista. Vibrazioni vivaci, luci soffuse e arredi
-              accoglienti creano l'atmosfera perfetta per condividere momenti
-              speciali o semplicemente rilassarsi dopo una lunga giornata.
+              Il nostro ambiente è progettato per farvi sentire come se foste
+              nel parco giochi di un alchimista. Vibrazioni vivaci, luci soffuse
+              e arredi accoglienti creano l'atmosfera perfetta per condividere
+              momenti speciali o semplicemente rilassarsi dopo una lunga
+              giornata.
             </p>
           </div>
         </div>
@@ -99,7 +102,7 @@ const Home = () => {
 
       <div className="container-sm px-5">
         <h2 className="mt-5 mb-3">Ultime recensioni</h2>
-        <Link to="/about#reviews">Vai alla sezione delle recensioni</Link>
+        <Link to="/about#allReviews">Vai alla sezione delle recensioni</Link>
         <div className="d-flex flex-wrap justify-content-center mt-5">
           {reviews.map((review) => {
             return (
