@@ -20,7 +20,7 @@ const About = () => {
           </div>
         </div>
       </Hero>
-      <div className="container-sm" id="allReviews">
+      <div className="container-sm mb-5" id="allReviews">
         <h2 className="mt-5">Recensioni locale</h2>
         <ReviewsPage reviewsPerPage ={4} />
       </div>
