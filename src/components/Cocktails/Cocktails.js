@@ -1,6 +1,6 @@
 import React from "react";
 import Coktail from "../Cocktail/Cocktail";
-import style from "./cocktails.css";
+import "./cocktails.css";
 import clsx from "clsx";
 
 const Cocktails = ({data, isFullWidth}) => {

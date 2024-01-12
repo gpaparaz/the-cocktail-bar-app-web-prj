@@ -1,7 +1,7 @@
 import React from "react";
 import { LinkComponent, SocialComponent } from "../../utils/links";
 import { useGlobalContext } from "../../context";
-import style from './sidebar.css';
+import './sidebar.css';
 
 
 const Sidebar = () => {

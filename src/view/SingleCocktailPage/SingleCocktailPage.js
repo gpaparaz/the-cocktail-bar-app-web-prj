@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./singleCocktailPage.css";
+import "./singleCocktailPage.css";
 import Loading from "../../components/Loading/Loading";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import { BsArrowLeftShort } from "react-icons/bs";

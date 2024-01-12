@@ -5,7 +5,7 @@ import useMultipleFetch from "../../useMultipleFetch";
 import Loading from "../../components/Loading/Loading";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import Cocktails from "../../components/Cocktails/Cocktails";
-import style from "./home.css";
+import "./home.css";
 import info from "../../utils/info.json";
 import Reviews from "../../components/Reviews/Reviews";
 import heroHome from "../../assets/image/hero-home.jpg";

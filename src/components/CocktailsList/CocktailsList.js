@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./cocktailsList.css";
+import "./cocktailsList.css";
 import { useNavigate } from "react-router-dom";
 const CocktailsList = ({ data }) => {
   const navigate = useNavigate();

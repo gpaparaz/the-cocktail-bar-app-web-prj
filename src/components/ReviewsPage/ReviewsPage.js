@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Reviews from "../Reviews/Reviews";
 import info from "../../utils/info.json";
-import style from "./reviewsPage.css";
+import "./reviewsPage.css";
 
 const ReviewsPage = ({ reviewsPerPage }) => {
   // Lista di recensioni (questo potrebbe essere recuperato da una fonte dati)

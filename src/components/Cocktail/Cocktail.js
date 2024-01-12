@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import style from "./cocktail.css";
+import "./cocktail.css";
 import clsx from "clsx";
 const Cocktail = ({ strDrinkThumb: img, idDrink: _id, strDrink: name, isFullWidth }) => {
   const navigate = useNavigate();

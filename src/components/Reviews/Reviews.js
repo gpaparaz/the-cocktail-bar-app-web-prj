@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./reviews.css";
+import "./reviews.css";
 import user from "../../assets/image/user.png";
 import { BsFillStarFill } from "react-icons/bs";
 

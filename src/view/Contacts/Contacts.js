@@ -1,5 +1,5 @@
 import React from 'react'
-import style from './contacts.css'
+import './contacts.css'
 import Hero from '../../components/Hero/Hero'
 import contactsHero from '../../assets/image/contacts-hero.jpg'
 import maps from '../../assets/image/maps.jpg'

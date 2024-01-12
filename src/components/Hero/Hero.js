@@ -1,6 +1,6 @@
 import React from 'react'
 import defaultImage from "../../assets/image/default.jpg";
-import style from './hero.css'
+import './hero.css'
 
 const Hero = ({ children, img, disableOverlay }) => {
     const image = img ? img : defaultImage;
