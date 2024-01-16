@@ -5,7 +5,7 @@ import './sidebar.css';
 
 
 const Sidebar = () => {
-  const { closeSidebar, isSidebarOpen } = useGlobalContext();
+  const { isSidebarOpen } = useGlobalContext();
   return (
     <aside className={`${isSidebarOpen ? "sidebar show-sidebar" : "sidebar"}`}>
       <div className="sidebar-content">

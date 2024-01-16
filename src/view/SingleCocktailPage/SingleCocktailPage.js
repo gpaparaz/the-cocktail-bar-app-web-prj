@@ -102,7 +102,7 @@ const SingleCocktailPage = () => {
                       </h5>
                     </li>
                   );
-                }
+                } else return ( <p></p>)
               })}
             </ul>
 

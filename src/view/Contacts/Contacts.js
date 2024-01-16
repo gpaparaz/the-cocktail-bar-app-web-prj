@@ -29,7 +29,7 @@ const Contacts = () => {
             </div>
           
           </div>
-            <img className='maps' src={maps} />
+            <img className='maps' src={maps} alt="map" />
         </div> 
       </Hero>
     </section>

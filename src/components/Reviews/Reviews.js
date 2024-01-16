@@ -9,7 +9,7 @@ const Reviews = ({ review, showUserAvatar, isFullWidth }) => {
   return (
     <div className={ isFullWidth ? "d-flex flex-column review card my-5" : "d-flex flex-column review card mx-3 cardWidth mx-3" }>
       <div className="d-flex align-items-center">
-        {showUserAvatar ? <img src={user} className="userReview" /> : null}
+        {showUserAvatar ? <img src={user} alt="user avatar" className="userReview" /> : null}
         <div className="flex-column mx-3">
           <div className="d-inline">
             {starsArray.map((_, index) => (

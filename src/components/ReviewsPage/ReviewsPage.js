@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, Fragment } from "react";
 import Reviews from "../Reviews/Reviews";
 import info from "../../utils/info.json";
 import "./reviewsPage.css";
@@ -22,7 +22,7 @@ const ReviewsPage = ({ reviewsPerPage }) => {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
-    <div>
+    <Fragment>
       <div className="contentReviewsPage">
         {currentReviews.map((review) => (
           <Reviews
@@ -55,7 +55,7 @@ const ReviewsPage = ({ reviewsPerPage }) => {
           </ul>
         )}
       </div>
-    </div>
+    </Fragment>
   );
 };
 
