@@ -3,8 +3,9 @@ import Review from "../Review/Review";
 import info from "../../utils/info.json";
 import "./reviewsPage.css";
 
-const ReviewsPage = ({ reviewsPerPage }) => {
+const ReviewsPage = () => {
   const allReviews = info.reviews;
+  const reviewsPerPage = 4;
 
   // Stato per tenere traccia della pagina corrente
   const [currentPage, setCurrentPage] = useState(1);

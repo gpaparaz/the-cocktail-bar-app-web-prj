@@ -10,7 +10,7 @@ import useGetListOfFilters from "../../useGetListOfFilters";
 import { FaSearch } from "react-icons/fa";
 import { BsFillGrid3X3GapFill, BsViewStacked } from "react-icons/bs";
 import CocktailsList from "../../components/CocktailsList/CocktailsList";
-import  ScrollToTopOnMount  from '../../utils/ScrollToTop'
+import ScrollToTopOnMount from "../../utils/ScrollToTop";
 
 const AllCocktails = () => {
   const { data, isLoading, isError, count, searchCocktail } =

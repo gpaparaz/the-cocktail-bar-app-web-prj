@@ -17,7 +17,7 @@ const AppProvider = ({ children }) => {
     setSidebarOpen(false);
   };
 
-  //Cerca cocktail: Quando cambia Query, ho un nuovo rendere di useFetch
+  //Cerca cocktail: Quando cambia Query, ho un nuovo render di useFetch
   const searchCocktail = (input, type) => {
     setQuery(input);
     setType(type);

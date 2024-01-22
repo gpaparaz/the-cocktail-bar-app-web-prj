@@ -4,6 +4,18 @@ const searchUrl = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?";
 const searchByName =
   "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=";
 
+
+/* type serve a stabilire il tipo di ricerca che sto facendo;
+  se è false allora sto cercando tutti i drink, ovvero alcolici + non alcolici;
+  se è true allora sto cercando tramite filtro di ricerca;
+  se è nullo allora sto cercando per nome.
+
+  query può essere qualunque tipo di testo. Nel caso della ricerca tramite filtro 
+  query corrisponde al filtro utilizzato (in accordo con quando inicato su TheCocktailDB), 
+  altrimenti può essere il nome inserito nel box di ricerca
+*/
+
+
 const useFetch = (query, type) => {
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState([]);
