@@ -9,8 +9,7 @@ const Sidebar = () => {
   return (
     <aside className={`${isSidebarOpen ? "sidebar show-sidebar" : "sidebar"}`}>
       <div className="sidebar-content">
-        <header className="nav-header container">
-        </header>
+
         <div className="container">
           <LinkComponent classLink="sidebar-links" />
         </div>

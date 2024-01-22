@@ -4,7 +4,6 @@ import info from "../../utils/info.json";
 import "./reviewsPage.css";
 
 const ReviewsPage = ({ reviewsPerPage }) => {
-  // Lista di recensioni (questo potrebbe essere recuperato da una fonte dati)
   const allReviews = info.reviews;
 
   // Stato per tenere traccia della pagina corrente
