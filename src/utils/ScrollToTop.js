@@ -5,7 +5,7 @@ const ScrollToTopOnMount = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  return null; // Non rendere alcun componente, poiché è solo per effetti collaterali
+  return null; 
 };
 
 export default ScrollToTopOnMount;
