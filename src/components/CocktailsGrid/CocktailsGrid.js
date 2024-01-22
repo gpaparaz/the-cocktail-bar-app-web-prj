@@ -1,9 +1,9 @@
 import React from "react";
 import Coktail from "../Cocktail/Cocktail";
-import "./cocktails.css";
+import "./cocktailsGrid.css";
 import clsx from "clsx";
 
-const Cocktails = ({data, isFullWidth}) => {
+const CocktailsGrid = ({data, isFullWidth}) => {
 
   return (
     <>
@@ -16,4 +16,4 @@ const Cocktails = ({data, isFullWidth}) => {
   );
 };
 
-export default Cocktails;
+export default CocktailsGrid;

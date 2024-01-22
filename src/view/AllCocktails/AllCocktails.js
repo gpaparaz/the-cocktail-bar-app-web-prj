@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useGlobalContext } from "../../context";
 import style from "./allcocktails.css";
 import clsx from "clsx";
-import Cocktails from "../../components/Cocktails/Cocktails";
+import CocktailsGrid from "../../components/CocktailsGrid/CocktailsGrid";
 import Loading from "../../components/Loading/Loading";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import Form from "react-bootstrap/Form";
@@ -187,7 +187,7 @@ const AllCocktails = () => {
                         </div>
                       </div>
                     </div>{" "}
-                    <Cocktails data={data} />
+                    <CocktailsGrid data={data} />
                   </div>
                 ) : null
               ) : (

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import useMultipleFetch from "../../useMultipleFetch";
 import Loading from "../../components/Loading/Loading";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
-import Cocktails from "../../components/Cocktails/Cocktails";
+import CocktailsGrid from "../../components/CocktailsGrid/CocktailsGrid";
 import "./home.css";
 import info from "../../utils/info.json";
 import Reviews from "../../components/Reviews/Reviews";
@@ -95,7 +95,7 @@ const Home = () => {
           <ErrorMessage>Nessun Cocktail Trovato</ErrorMessage>
         ) : data && data.length > 0 ? (
           <>
-            <Cocktails data={data} isFullWidth={true} />
+            <CocktailsGrid data={data} isFullWidth={true} />
           </>
         ) : null}
       </div>

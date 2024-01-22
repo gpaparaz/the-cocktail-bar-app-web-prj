@@ -4,7 +4,7 @@ import Loading from "../../components/Loading/Loading";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import { BsArrowLeftShort } from "react-icons/bs";
 import { useParams, Link } from "react-router-dom";
-import Cocktails from "../../components/Cocktails/Cocktails";
+import CocktailsGrid from "../../components/CocktailsGrid/CocktailsGrid";
 import useFetchByIdAndIngredient from "../../useFetchByIdAndIngredient";
 import ScrollToTopOnMount from "../../utils/ScrollToTop";
 
@@ -122,7 +122,7 @@ const SingleCocktailPage = () => {
           ) : isError ? (
             <ErrorMessage>Nessun Cocktail Trovato</ErrorMessage>
           ) : ingredientsList && ingredientsList.length > 0 ? (
-            <Cocktails data={ingredientsList} />
+            <CocktailsGrid data={ingredientsList} />
           ) : null}
         </div>
       </div>
