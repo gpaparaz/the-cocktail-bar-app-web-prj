@@ -1,4 +1,14 @@
 .loading-position {
     background-color: black;
     height: 100vh;
+    width: 100%;
+}
+
+.lds-roller  {
+    height: 100vh;
+}
+
+.loading-img {
+    height: 400px;
+    width: 400px;
 }
