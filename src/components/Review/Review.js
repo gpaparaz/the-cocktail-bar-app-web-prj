@@ -1,9 +1,9 @@
 import React from "react";
-import "./reviews.css";
+import "./review.css";
 import user from "../../assets/image/user.png";
 import { BsFillStarFill } from "react-icons/bs";
 
-const Reviews = ({ review, showUserAvatar, isFullWidth }) => {
+const Review = ({ review, showUserAvatar, isFullWidth }) => {
   const starsArray = new Array(review.stars).fill(null);
 
   return (
@@ -26,4 +26,4 @@ const Reviews = ({ review, showUserAvatar, isFullWidth }) => {
   );
 };
 
-export default Reviews;
+export default Review;

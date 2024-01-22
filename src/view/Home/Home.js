@@ -7,7 +7,7 @@ import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import CocktailsGrid from "../../components/CocktailsGrid/CocktailsGrid";
 import "./home.css";
 import info from "../../utils/info.json";
-import Reviews from "../../components/Reviews/Reviews";
+import Review from "../../components/Review/Review";
 import heroHome from "../../assets/image/hero-home.jpg";
 import ScrollToTopOnMount from "../../utils/ScrollToTop";
 
@@ -106,7 +106,7 @@ const Home = () => {
         <div className="d-flex flex-wrap justify-content-center mt-5">
           {reviews.map((review) => {
             return (
-              <Reviews key={review.id} review={review} showUserAvatar={false} />
+              <Review key={review.id} review={review} showUserAvatar={false} />
             );
           })}
         </div>

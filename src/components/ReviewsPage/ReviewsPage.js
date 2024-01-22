@@ -1,5 +1,5 @@
 import React, { useState, Fragment } from "react";
-import Reviews from "../Reviews/Reviews";
+import Review from "../Review/Review";
 import info from "../../utils/info.json";
 import "./reviewsPage.css";
 
@@ -24,7 +24,7 @@ const ReviewsPage = ({ reviewsPerPage }) => {
     <Fragment>
       <div className="contentReviewsPage">
         {currentReviews.map((review) => (
-          <Reviews
+          <Review
             key={review.id}
             review={review}
             showUserAvatar={true}
