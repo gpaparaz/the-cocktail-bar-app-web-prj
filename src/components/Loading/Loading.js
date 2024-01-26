@@ -6,7 +6,7 @@ const Loading = () => {
   return (
     <div className="loading-position">
       <div className="lds-roller d-flex justify-content-center align-items-center">
-        <img className="loading-img" src={loading} />
+        <img className="loading-img" src={loading} alt="loading"/>
       </div>
     </div>
   );

@@ -3,7 +3,7 @@ import Coktail from "../Cocktail/Cocktail";
 import "./cocktailsGrid.css";
 import clsx from "clsx";
 
-const CocktailsGrid = ({data, isFullWidth}) => {
+const CocktailsGrid = ({isFullWidth, data = []}) => {
 
   return (
     <>

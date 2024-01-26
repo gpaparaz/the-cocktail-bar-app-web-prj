@@ -55,7 +55,7 @@ const useFetchByIdAndIngredient = (id) => {
         setLoading(false);
       }
     })(id);
-  }, [id, searchById]);
+  }, [id]);
 
   return { data, isLoading, ingredientsList, isError };
 };

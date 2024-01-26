@@ -59,7 +59,7 @@ const useFetch = (query, type) => {
       }
       setIsLoading(false);
     })(query);
-  }, [query, searchUrl]);
+  }, [query, type]);
 
   return { isLoading, data, isError, count };
 };

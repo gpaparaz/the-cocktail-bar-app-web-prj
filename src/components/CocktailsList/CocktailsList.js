@@ -1,7 +1,7 @@
 import React from "react";
 import "./cocktailsList.css";
 import { useNavigate } from "react-router-dom";
-const CocktailsList = ({ data }) => {
+const CocktailsList = ({ data = [] }) => {
   const navigate = useNavigate();
 
   const goToCocktail = (_id) => {
