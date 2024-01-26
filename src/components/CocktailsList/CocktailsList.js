@@ -1,6 +1,9 @@
 import React from "react";
 import "./cocktailsList.css";
 import { useNavigate } from "react-router-dom";
+
+/* con data = [] utilizzo un default props */
+
 const CocktailsList = ({ data = [] }) => {
   const navigate = useNavigate();
 

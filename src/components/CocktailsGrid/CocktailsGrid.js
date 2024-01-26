@@ -3,6 +3,8 @@ import Coktail from "../Cocktail/Cocktail";
 import "./cocktailsGrid.css";
 import clsx from "clsx";
 
+/* con data = [] utilizzo un default props */
+
 const CocktailsGrid = ({isFullWidth, data = []}) => {
 
   return (
