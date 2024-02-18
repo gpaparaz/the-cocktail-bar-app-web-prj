@@ -13,7 +13,17 @@ import CocktailsList from "../../components/CocktailsList/CocktailsList";
 import ScrollToTopOnMount from "../../utils/ScrollToTop";
 
 const AllCocktails = () => {
-  const { data, isLoading, isError, count, searchCocktail } =
+  const { 
+    data, 
+    isLoading, 
+    isError, count, 
+    searchCocktail, 
+    glassFilter, 
+    setGlassFilter, 
+    categoryDrinkFilter, 
+    setCategoryDrinkFilter,
+    drikNameInput,
+    setDrinkNameInput } =
     useGlobalContext();
 
   const [displayGrid, setDisplayGrid] = useState("true");
@@ -23,17 +33,17 @@ const AllCocktails = () => {
   const { data: category, isLoading: isLoadingCategory } =
     useGetListOfFilters("c=list");
 
-  const [selectedGlass, setSelectedGlass] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("");
+  // const [selectedGlass, setSelectedGlass] = useState("");
+  // const [selectedCategory, setSelectedCategory] = useState("");
   const [input, setInput] = useState("");
 
   const handleSelectedGlass = (e) => {
     const selectedGlass = e.target.value;
-    setSelectedGlass(selectedGlass);
+    setGlassFilter(selectedGlass);
     if (selectedGlass === "") searchCocktail("", false);
     else {
-      if (selectedCategory !== "") {
-        setSelectedCategory("");
+      if (categoryDrinkFilter !== "") {
+        setCategoryDrinkFilter("");
         searchCocktail(`g=${selectedGlass}`, true);
       } else {
         searchCocktail(`g=${selectedGlass}`, true);
@@ -43,13 +53,13 @@ const AllCocktails = () => {
 
   const handleSelectedCategory = (e) => {
     const selectedCategory = e.target.value;
-    setSelectedCategory(selectedCategory);
+    setCategoryDrinkFilter(selectedCategory);
 
     if (selectedCategory === "") {
       searchCocktail("", false);
     } else {
-      if (selectedGlass !== "") {
-        setSelectedGlass("");
+      if (glassFilter !== "") {
+        setGlassFilter("");
         searchCocktail(`c=${selectedCategory}`, true);
       } else {
         searchCocktail(`c=${selectedCategory}`, true);
@@ -58,24 +68,24 @@ const AllCocktails = () => {
   };
 
   const resetFilters = () => {
-    setSelectedCategory("");
-    setSelectedGlass("");
+    setCategoryDrinkFilter("");
+    setGlassFilter("");
     setInput("");
     searchCocktail("", false);
   };
 
   const handleToggle = (selected) => {
     if (!selected) {
-      setSelectedGlass("");
-      setSelectedCategory("");
+      setCategoryDrinkFilter("");
+      setGlassFilter("");
       searchCocktail("", false);
     }
   };
 
   const handleSubmit = (e) => {
-    setSelectedGlass("");
-    setSelectedCategory("");
     e.preventDefault();
+    setCategoryDrinkFilter("");
+    setGlassFilter("");
     searchCocktail(input, null);
   };
 
@@ -97,7 +107,7 @@ const AllCocktails = () => {
                     handleToggle(e.target.value !== "");
                     handleSelectedGlass(e);
                   }}
-                  value={selectedGlass}
+                  value={glassFilter}
                 >
                   <option value="">Tutti</option>
                   {glass.map((glass, index) => (
@@ -116,7 +126,7 @@ const AllCocktails = () => {
                     handleToggle(e.target.value !== "");
                     handleSelectedCategory(e);
                   }}
-                  value={selectedCategory}
+                  value={categoryDrinkFilter}
                 >
                   <option value="">Tutti</option>
                   {category.map((category, index) => (
