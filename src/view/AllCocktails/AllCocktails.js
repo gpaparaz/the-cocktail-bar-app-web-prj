@@ -97,7 +97,7 @@ const AllCocktails = () => {
           ) : (
             <>
               <Form>
-                <label>Tipo di bicchiere</label>
+                <label>Glass type</label>
                 <Form.Select
                   className="form-control"
                   aria-label="Select glass"
@@ -107,7 +107,7 @@ const AllCocktails = () => {
                   }}
                   value={glassFilter}
                 >
-                  <option value="">Tutti</option>
+                  <option value="">All</option>
                   {glass.map((glass, index) => (
                     <option key={index} value={glass.strGlass}>
                       {glass.strGlass}
@@ -116,7 +116,7 @@ const AllCocktails = () => {
                 </Form.Select>
               </Form>
               <Form>
-                <label>Categoria drink </label>
+                <label>Drink category</label>
                 <Form.Select
                   className="form-control"
                   aria-label="Select category"
@@ -126,7 +126,7 @@ const AllCocktails = () => {
                   }}
                   value={categoryDrinkFilter}
                 >
-                  <option value="">Tutti</option>
+                  <option value="">All</option>
                   {category.map((category, index) => (
                     <option key={index} value={category.strCategory}>
                       {category.strCategory}
@@ -136,7 +136,7 @@ const AllCocktails = () => {
               </Form>
 
               <form onSubmit={handleSubmit}>
-                <label htmlFor="drink">Cerca il tuo drink</label>
+                <label htmlFor="drink">Search drink</label>
                 <div className="input-search">
                   <div class="input-group">
                     <input
@@ -171,11 +171,11 @@ const AllCocktails = () => {
                 isLoading ? (
                   <Loading />
                 ) : isError ? (
-                  <ErrorMessage>Nessun Cocktail Trovato</ErrorMessage>
+                  <ErrorMessage>No cocktails found</ErrorMessage>
                 ) : data && data && data.length > 0 ? (
                   <div>
                     <div className="d-flex justify-content-between align-items-center">
-                      <p className="mt-5">Prodotti disponibili: {count}</p>
+                      <p className="mt-5">Cocktails available: {count}</p>
 
                       <div className="d-flex flex-inline">
                         <div className={style.switch}>
@@ -201,7 +201,7 @@ const AllCocktails = () => {
               ) : (
                 <div>
                   <div className="d-flex justify-content-between align-items-center">
-                    <p className="mt-5">Prodotti disponibili: {count}</p>
+                    <p className="mt-5">Cocktails available: {count}</p>
 
                     <div className="d-flex flex-inline">
                       <div className={style.switch}>
