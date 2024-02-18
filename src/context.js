@@ -9,6 +9,7 @@ const AppProvider = ({ children }) => {
   const { isLoading, data, isError, count } = useFetch(`${query}`, type);
   const [glassFilter, setGlassFilter] = useState('');
   const [categoryDrinkFilter, setCategoryDrinkFilter] = useState('');
+  const [drinkNameInput, setDrinkNameInput] = useState('');
 
   //stati e funzioni che gestiscono la sidebar
   const [isSidebarOpen, setSidebarOpen] = useState(false);
@@ -40,7 +41,9 @@ const AppProvider = ({ children }) => {
         glassFilter, 
         categoryDrinkFilter,
         setCategoryDrinkFilter,
-        setGlassFilter
+        setGlassFilter,
+        drinkNameInput,
+        setDrinkNameInput
       }}
     >
       {children}

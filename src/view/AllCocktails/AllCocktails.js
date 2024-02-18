@@ -22,7 +22,7 @@ const AllCocktails = () => {
     setGlassFilter, 
     categoryDrinkFilter, 
     setCategoryDrinkFilter,
-    drikNameInput,
+    drinkNameInput,
     setDrinkNameInput } =
     useGlobalContext();
 
@@ -32,10 +32,6 @@ const AllCocktails = () => {
     useGetListOfFilters("g=list");
   const { data: category, isLoading: isLoadingCategory } =
     useGetListOfFilters("c=list");
-
-  // const [selectedGlass, setSelectedGlass] = useState("");
-  // const [selectedCategory, setSelectedCategory] = useState("");
-  const [input, setInput] = useState("");
 
   const handleSelectedGlass = (e) => {
     const selectedGlass = e.target.value;
@@ -70,7 +66,7 @@ const AllCocktails = () => {
   const resetFilters = () => {
     setCategoryDrinkFilter("");
     setGlassFilter("");
-    setInput("");
+    setDrinkNameInput("");
     searchCocktail("", false);
   };
 
@@ -86,8 +82,10 @@ const AllCocktails = () => {
     e.preventDefault();
     setCategoryDrinkFilter("");
     setGlassFilter("");
-    searchCocktail(input, null);
+    searchCocktail(drinkNameInput, null);
   };
+  
+  
 
   return (
     <section className="cocktailsContent mb-5">
@@ -145,8 +143,8 @@ const AllCocktails = () => {
                       id="drink"
                       className="input form-control"
                       placeholder="Cerca per nome"
-                      value={input}
-                      onChange={(e) => setInput(e.target.value)}
+                      value={drinkNameInput}
+                      onChange={(e) => setDrinkNameInput(e.target.value)}
                     />
                     <button class="input-group-text icon-search" type="submit">
                       <FaSearch className="icon" />
